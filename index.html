@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumen de Desarrollo — Marzo 2026 · Cashblock × Luky</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f1f5f9; }
+    .slide { page-break-after: always; margin-bottom: 40px; }
+
+    /* accent top border */
+    .accent-amber  { border-top: 4px solid #f9b91b; }
+    .accent-blue   { border-top: 4px solid #2970FF; }
+    .accent-green  { border-top: 4px solid #10B981; }
+    .accent-cyan   { border-top: 4px solid #06AED4; }
+    .accent-indigo { border-top: 4px solid #6366F1; }
+    .accent-orange { border-top: 4px solid #F79009; }
+    .accent-red    { border-top: 4px solid #F04438; }
+
+    /* tags */
+    .tag { display:inline-flex;align-items:center;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.3px }
+    .tag-amber  { background:#fef3c7;color:#92400e }
+    .tag-blue   { background:#dbeafe;color:#1e40af }
+    .tag-green  { background:#d1fae5;color:#065f46 }
+    .tag-cyan   { background:#cffafe;color:#164e63 }
+    .tag-indigo { background:#e0e7ff;color:#312e81 }
+    .tag-orange { background:#ffedd5;color:#7c2d12 }
+    .tag-red    { background:#fee2e2;color:#7f1d1d }
+
+    /* pill badge */
+    .pill { display:inline-flex;align-items:center;gap:5px;padding:3px 12px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase }
+    .pill-amber  { background:#f9b91b;color:#fff }
+    .pill-blue   { background:#2970FF;color:#fff }
+    .pill-green  { background:#10B981;color:#fff }
+    .pill-cyan   { background:#06AED4;color:#fff }
+    .pill-indigo { background:#6366F1;color:#fff }
+    .pill-orange { background:#F79009;color:#fff }
+    .pill-red    { background:#F04438;color:#fff }
+
+    /* feature row */
+    .feat-row { display:flex;align-items:flex-start;gap:10px;padding:9px 12px;border-radius:10px;background:#f8fafc;border:1px solid #e2e8f0 }
+    .feat-ico  { width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px }
+
+    /* impact block */
+    .impact { padding:12px 16px;border-radius:12px;border-left:4px solid }
+    .impact-amber  { background:#fffbeb;border-color:#f9b91b }
+    .impact-blue   { background:#eff6ff;border-color:#2970FF }
+    .impact-green  { background:#f0fdf4;border-color:#10B981 }
+    .impact-cyan   { background:#ecfeff;border-color:#06AED4 }
+    .impact-indigo { background:#eef2ff;border-color:#6366F1 }
+    .impact-orange { background:#fff7ed;border-color:#F79009 }
+    .impact-red    { background:#fef2f2;border-color:#F04438 }
+
+    /* kpi big number */
+    .kpi-num { font-size:48px;font-weight:900;line-height:1;letter-spacing:-2px }
+
+    /* flow step */
+    .flow-step { display:flex;flex-direction:column;align-items:center;gap:6px;flex:1 }
+    .flow-circle { width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0 }
+    .flow-line { height:3px;flex:1;border-radius:2px }
+
+    /* contrib bar */
+    .cbar { height:8px;border-radius:4px }
+
+    /* section label */
+    .sec-lbl { font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#94a3b8;margin-bottom:10px;display:flex;align-items:center;gap:8px }
+    .sec-lbl::after { content:'';flex:1;height:1px;background:#e2e8f0 }
+
+    /* check list */
+    .chk { display:flex;align-items:flex-start;gap:8px;font-size:13px;color:#334155;line-height:1.5 }
+    .chk-dot { width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:9px;color:white;font-weight:700 }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 1 — PORTADA
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- top strip -->
+    <div class="h-1.5 w-full" style="background:linear-gradient(90deg,#f9b91b,#F79009,#10B981,#2970FF,#6366F1)"></div>
+
+    <div class="p-10">
+      <!-- eyebrow -->
+      <div class="flex items-center gap-3 mb-6">
+        <span class="pill pill-amber">Marzo 2026</span>
+        <span class="text-sm text-slate-400 font-medium">Equipo de Ingeniería · Cashblock × Luky</span>
+      </div>
+
+      <!-- main title -->
+      <h1 class="text-5xl font-black text-slate-900 leading-tight mb-3">
+        Resumen de<br>
+        <span style="color:#f9b91b">Desarrollo</span> — Marzo 2026
+      </h1>
+      <p class="text-slate-500 text-lg mb-10 max-w-2xl">
+        Un mes de construcción intensa: IA conversacional, validación de identidad robusta, automatización de pagarés y plataforma más observable y estable.
+      </p>
+
+      <!-- kpi grid -->
+      <div class="grid grid-cols-4 gap-5 mb-10">
+        <div class="rounded-2xl p-5 accent-amber" style="background:#fffbeb">
+          <div class="kpi-num" style="color:#f9b91b">~280</div>
+          <div class="text-sm font-600 text-slate-600 mt-1">Commits Backend</div>
+          <div class="text-xs text-slate-400">Django · APIs · Workers</div>
+        </div>
+        <div class="rounded-2xl p-5 accent-blue" style="background:#eff6ff">
+          <div class="kpi-num text-blue-600">~120</div>
+          <div class="text-sm font-600 text-slate-600 mt-1">Commits Frontend</div>
+          <div class="text-xs text-slate-400">React · MUI · Hooks</div>
+        </div>
+        <div class="rounded-2xl p-5 accent-green" style="background:#f0fdf4">
+          <div class="kpi-num text-emerald-600">8</div>
+          <div class="text-sm font-600 text-slate-600 mt-1">Módulos entregados</div>
+          <div class="text-xs text-slate-400">2 hotfixes en producción</div>
+        </div>
+        <div class="rounded-2xl p-5" style="background:#f8fafc;border-top:4px solid #6366F1">
+          <div class="kpi-num text-indigo-600">5</div>
+          <div class="text-sm font-600 text-slate-600 mt-1">Contribuidores activos</div>
+          <div class="text-xs text-slate-400">14 commits/día promedio</div>
+        </div>
+      </div>
+
+      <!-- contributors -->
+      <div class="sec-lbl">Equipo</div>
+      <div class="grid grid-cols-5 gap-4">
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg" style="background:#f9b91b">SA</div>
+          <div class="text-sm font-700 text-slate-800">Sebastian Avilés</div>
+          <div class="text-xs text-slate-400">57.8% · Lead</div>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg">JC</div>
+          <div class="text-sm font-700 text-slate-800">Jeferson Camero</div>
+          <div class="text-xs text-slate-400">28.9% · Full-stack</div>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg">CS</div>
+          <div class="text-sm font-700 text-slate-800">Carlos Sebastian</div>
+          <div class="text-xs text-slate-400">12.8% · Backend</div>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-indigo-400 flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg">JF</div>
+          <div class="text-sm font-700 text-slate-800">Jose Felipe</div>
+          <div class="text-xs text-slate-400">0.4% · Puntual</div>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-slate-300 flex items-center justify-center mx-auto mb-2 text-slate-500 font-bold text-lg">CX</div>
+          <div class="text-sm font-700 text-slate-800">cgomezfe</div>
+          <div class="text-xs text-slate-400">Combinado con CS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 2 — BOT DE SOPORTE IA
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-amber">
+    <div class="p-8">
+      <!-- header -->
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <span class="pill pill-amber mb-3 inline-block">🤖 Bot de Soporte IA</span>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">
+            Soporte 24/7 que entiende<br>a cada cliente por cédula
+          </h2>
+          <p class="text-slate-500 mt-2">Motor de herramientas · RAG con pgvector · Escalación inteligente al asesor</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black text-amber-400 leading-none select-none">02</div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <!-- left col -->
+        <div class="space-y-3">
+          <div class="sec-lbl">5 herramientas operativas</div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#fef3c7"><i class="fas fa-id-card" style="color:#d97706"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Búsqueda por cédula</div><div class="text-xs text-slate-500">Perfil completo del cliente al instante</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#fef3c7"><i class="fas fa-calendar-check" style="color:#d97706"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Cuotas y mora</div><div class="text-xs text-slate-500">Estado real de la deuda + simulación SFC</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#fef3c7"><i class="fas fa-credit-card" style="color:#d97706"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Intentos de pago activos</div><div class="text-xs text-slate-500">Transacciones en curso en tiempo real</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#fef3c7"><i class="fas fa-history" style="color:#d97706"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Historial de pagos</div><div class="text-xs text-slate-500">Línea de tiempo completa de pagos</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#fef3c7"><i class="fas fa-book" style="color:#d97706"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">RAG contextual — pgvector</div><div class="text-xs text-slate-500">Respuestas basadas en base de conocimiento propia</div></div>
+          </div>
+        </div>
+
+        <!-- right col -->
+        <div class="space-y-3">
+          <div class="sec-lbl">Experiencia y escalación</div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#f0fdf4"><i class="fas fa-comment-dots" style="color:#059669"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Chat flotante en el portal público</div><div class="text-xs text-slate-500">Soporte en tiempo real para cualquier usuario</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#f0fdf4"><i class="fas fa-paperclip" style="color:#059669"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Adjuntos e imágenes en el chat</div><div class="text-xs text-slate-500">Soporte completo de archivos multimedia</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#f0fdf4"><i class="fas fa-volume-mute" style="color:#059669"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">El bot se silencia cuando ingresa un asesor</div><div class="text-xs text-slate-500">Transición sin fricciones de IA a humano</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#f0fdf4"><i class="fas fa-headset" style="color:#059669"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Panel de asesor para chats escalados</div><div class="text-xs text-slate-500">Vista unificada de conversaciones asignadas</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#f0fdf4"><i class="fas fa-cog" style="color:#059669"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Base de conocimiento administrable</div><div class="text-xs text-slate-500">Carga, edición y eliminación desde el panel admin</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact impact-amber mt-6">
+        <span class="font-800 text-amber-800">⚡ Impacto — </span>
+        <span class="text-amber-900 text-sm">Los clientes resuelven consultas de cuotas, pagos y mora sin necesidad de un asesor humano. El bot sabe cuándo callarse y transferir.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 3 — KYC / OCR / BIOMETRÍA
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-blue">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <span class="pill pill-blue mb-3 inline-block">🛡️ KYC / OCR / Biometría</span>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">
+            Detecta si el documento<br>es una pantalla, no un original
+          </h2>
+          <p class="text-slate-500 mt-2">Gemini Vision reemplaza Azure · Flujo sin fricción · Anti-fraude documental</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black text-blue-400 leading-none select-none">03</div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 items-start">
+        <!-- left -->
+        <div class="space-y-4">
+          <div>
+            <div class="sec-lbl">Anti-fraude documental</div>
+            <div class="space-y-2">
+              <div class="chk"><div class="chk-dot" style="background:#2970FF">✓</div><span><strong>Documentos no físicos detectados</strong> — identifica pantallas y fotocopias antes del OCR</span></div>
+              <div class="chk"><div class="chk-dot" style="background:#2970FF">✓</div><span><strong>Detalles de manipulación visibles</strong> en la tarjeta de validación KYC del analista</span></div>
+              <div class="chk"><div class="chk-dot" style="background:#2970FF">✓</div><span><strong>Azure Computer Vision eliminado</strong> → Gemini Vision: más preciso y menor costo</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="sec-lbl">Flujo de identidad mejorado</div>
+            <div class="space-y-2">
+              <div class="chk"><div class="chk-dot" style="background:#2970FF">✓</div><span><strong>Foto de cédula</strong> disponible en el detalle de cada solicitud de crédito</span></div>
+              <div class="chk"><div class="chk-dot" style="background:#2970FF">✓</div><span><strong>Fecha de expedición editable</strong> desde el detalle de verificación</span></div>
+              <div class="chk"><div class="chk-dot" style="background:#2970FF">✓</div><span><strong>Foto liveness incluida</strong> en el listado de verificaciones para revisión</span></div>
+              <div class="chk"><div class="chk-dot" style="background:#2970FF">✓</div><span><strong>Paso de selección de tipo eliminado</strong> — el sistema lo detecta automáticamente</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="sec-lbl">Gestión administrativa</div>
+            <div class="space-y-2">
+              <div class="chk"><div class="chk-dot" style="background:#2970FF">✓</div><span><strong>Filtro por fuente MetaMap</strong> en listado y dashboard de verificaciones</span></div>
+              <div class="chk"><div class="chk-dot" style="background:#2970FF">✓</div><span><strong>Acta firmada</strong> como nuevo tipo de documento en el panel de vehículos</span></div>
+            </div>
+          </div>
+          <div class="impact impact-blue">
+            <span class="font-800 text-blue-800">🛡️ Impacto — </span>
+            <span class="text-blue-900 text-sm">Reducción de fraude documental desde la primera carga. El flujo de identidad es más rápido, limpio y sin selecciones manuales.</span>
+          </div>
+        </div>
+
+        <!-- right: cedula image -->
+        <div class="flex flex-col items-center gap-4">
+          <img src="cedula-colombia.jpeg"
+               alt="Cédula de Ciudadanía Colombia"
+               class="rounded-2xl shadow-lg w-full max-w-xs object-contain"
+               style="border:3px solid #dbeafe">
+          <div class="text-center">
+            <div class="text-xs text-slate-400 font-600 uppercase tracking-wide">Documento analizado</div>
+            <div class="text-sm font-700 text-slate-700 mt-1">Cédula de Ciudadanía — República de Colombia</div>
+            <div class="flex gap-2 justify-center mt-2">
+              <span class="tag tag-blue">OCR automático</span>
+              <span class="tag tag-green">Liveness check</span>
+              <span class="tag tag-amber">Anti-fraude</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 4 — JOURNEY UNIFICADO
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-green">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <span class="pill pill-green mb-3 inline-block">🚀 Journey Unificado</span>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">
+            Un solo enlace para deudor<br>y codeudor, sin formularios legados
+          </h2>
+          <p class="text-slate-500 mt-2">Documentos · Validación · Biometría · mismo flujo para ambos roles</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black text-emerald-400 leading-none select-none">04</div>
+      </div>
+
+      <!-- flow diagram -->
+      <div class="mb-6">
+        <div class="sec-lbl">Flujo del journey público</div>
+        <div class="flex items-center gap-0">
+          <div class="flow-step">
+            <div class="flow-circle" style="background:#d1fae5"><i class="fas fa-user text-emerald-600 text-xl"></i></div>
+            <div class="text-center"><div class="text-xs font-700 text-slate-700">Invitación</div><div class="text-xs text-slate-400">Link único al portal</div></div>
+          </div>
+          <div class="flow-line" style="background:#a7f3d0"></div>
+          <div class="flow-step">
+            <div class="flow-circle" style="background:#d1fae5"><i class="fas fa-file-alt text-emerald-600 text-xl"></i></div>
+            <div class="text-center"><div class="text-xs font-700 text-slate-700">Documentos</div><div class="text-xs text-slate-400">Cobertura obligatoria</div></div>
+          </div>
+          <div class="flow-line" style="background:#a7f3d0"></div>
+          <div class="flow-step">
+            <div class="flow-circle" style="background:#d1fae5"><i class="fas fa-id-card text-emerald-600 text-xl"></i></div>
+            <div class="text-center"><div class="text-xs font-700 text-slate-700">Verificación</div><div class="text-xs text-slate-400">OCR + MetaMap</div></div>
+          </div>
+          <div class="flow-line" style="background:#a7f3d0"></div>
+          <div class="flow-step">
+            <div class="flow-circle" style="background:#d1fae5"><i class="fas fa-fingerprint text-emerald-600 text-xl"></i></div>
+            <div class="text-center"><div class="text-xs font-700 text-slate-700">Biometría</div><div class="text-xs text-slate-400">Liveness + selfie</div></div>
+          </div>
+          <div class="flow-line" style="background:#a7f3d0"></div>
+          <div class="flow-step">
+            <div class="flow-circle bg-emerald-500"><i class="fas fa-check text-white text-xl"></i></div>
+            <div class="text-center"><div class="text-xs font-700 text-emerald-700">Completado</div><div class="text-xs text-slate-400">Deudor o Codeudor</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <div class="sec-lbl">Novedades del journey</div>
+          <div class="chk"><div class="chk-dot" style="background:#10B981">✓</div><span><strong>Codeudor redirigido al journey público</strong> — adiós al formulario legado</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#10B981">✓</div><span><strong>Documentos completos requeridos</strong> para finalizar el journey del codeudor</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#10B981">✓</div><span><strong>Pantalla fallback de cámara</strong> cuando el dispositivo no tiene acceso</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#10B981">✓</div><span><strong>Relink de créditos</strong> — vinculación de verificaciones a tokens del journey</span></div>
+        </div>
+        <div class="space-y-2">
+          <div class="sec-lbl">Controles administrativos</div>
+          <div class="chk"><div class="chk-dot" style="background:#10B981">✓</div><span><strong>Estado manual del codeudor</strong> — el admin puede avanzar o bloquear etapas</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#10B981">✓</div><span><strong>Timeline con etapas futuras</strong> visible en el detalle del crédito</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#10B981">✓</div><span><strong>Trazabilidad completa</strong> de cada acción del deudor y codeudor</span></div>
+        </div>
+      </div>
+
+      <div class="impact impact-green mt-5">
+        <span class="font-800 text-green-800">🚀 Impacto — </span>
+        <span class="text-green-900 text-sm">Un solo proceso para deudor y codeudor elimina duplicidad operativa. El equipo comercial ya no gestiona dos flujos paralelos.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 5 — REPORTE Y MODELO DE DECISIÓN
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-cyan">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <span class="pill pill-cyan mb-3 inline-block">📊 Reporte y Modelo de Decisión</span>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">
+            La tasa TIBC se bloquea al aprobar.<br>Ya no fluctúa con el mercado.
+          </h2>
+          <p class="text-slate-500 mt-2">DataCredito · Nuevas reglas de negocio · Modelo actualizado</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black text-cyan-400 leading-none select-none">05</div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-5">
+        <!-- DataCredito -->
+        <div class="rounded-2xl p-5 space-y-3" style="background:#ecfeff;border:1px solid #a5f3fc">
+          <div class="flex items-center gap-2 mb-1">
+            <i class="fas fa-database" style="color:#06AED4"></i>
+            <span class="text-sm font-800 text-slate-700">DataCredito</span>
+            <span class="tag tag-cyan">SCRUM-261</span>
+          </div>
+          <div class="chk text-xs"><div class="chk-dot" style="background:#06AED4;width:14px;height:14px;font-size:7px">✓</div><span><strong>Corte mensual configurable</strong> — reemplaza validez fija de 90 días</span></div>
+          <div class="chk text-xs"><div class="chk-dot" style="background:#06AED4;width:14px;height:14px;font-size:7px">✓</div><span><strong>Valores monetarios corregidos</strong> — campos divididos ÷1000 a pesos reales</span></div>
+        </div>
+
+        <!-- Modelo de decisión -->
+        <div class="rounded-2xl p-5 space-y-3" style="background:#ecfeff;border:1px solid #a5f3fc">
+          <div class="flex items-center gap-2 mb-1">
+            <i class="fas fa-brain" style="color:#06AED4"></i>
+            <span class="text-sm font-800 text-slate-700">Modelo de Decisión</span>
+          </div>
+          <div class="chk text-xs"><div class="chk-dot" style="background:#06AED4;width:14px;height:14px;font-size:7px">✓</div><span><strong>Tasa TIBC fija</strong> al momento de aprobar o desembolsar</span></div>
+          <div class="chk text-xs"><div class="chk-dot" style="background:#06AED4;width:14px;height:14px;font-size:7px">✓</div><span><strong>Nuevas razones de rechazo</strong> para deudor y codeudor en el modelo</span></div>
+          <div class="chk text-xs"><div class="chk-dot" style="background:#06AED4;width:14px;height:14px;font-size:7px">✓</div><span><strong>Antigüedad laboral mínima: 3 meses</strong> <span class="tag tag-cyan">SCRUM-258</span></span></div>
+        </div>
+
+        <!-- Reglas de negocio -->
+        <div class="rounded-2xl p-5 space-y-3" style="background:#ecfeff;border:1px solid #a5f3fc">
+          <div class="flex items-center gap-2 mb-1">
+            <i class="fas fa-sliders-h" style="color:#06AED4"></i>
+            <span class="text-sm font-800 text-slate-700">Reglas de Negocio</span>
+          </div>
+          <div class="chk text-xs"><div class="chk-dot" style="background:#06AED4;width:14px;height:14px;font-size:7px">✓</div><span><strong>Plazo máximo 72 → 48 meses</strong> para controlar riesgo de cartera <span class="tag tag-cyan">SCRUM-260</span></span></div>
+          <div class="chk text-xs"><div class="chk-dot" style="background:#06AED4;width:14px;height:14px;font-size:7px">✓</div><span><strong>Pólizas de vida en Excel</strong> — selección de codeudores aprobados exportable</span></div>
+        </div>
+      </div>
+
+      <!-- visual: before/after -->
+      <div class="mt-5 grid grid-cols-2 gap-4">
+        <div class="rounded-xl p-4" style="background:#fef2f2;border:1px solid #fecaca">
+          <div class="text-xs font-700 text-red-600 uppercase tracking-wide mb-2">❌ Antes</div>
+          <div class="text-sm text-red-900 space-y-1">
+            <div>— DataCredito válido 90 días fijos</div>
+            <div>— Tasa TIBC fluctúa post-aprobación</div>
+            <div>— Plazo hasta 72 meses</div>
+            <div>— Valores monetarios ×1000 inflados</div>
+          </div>
+        </div>
+        <div class="rounded-xl p-4" style="background:#f0fdf4;border:1px solid #bbf7d0">
+          <div class="text-xs font-700 text-green-600 uppercase tracking-wide mb-2">✅ Ahora</div>
+          <div class="text-sm text-green-900 space-y-1">
+            <div>+ Corte mensual configurable</div>
+            <div>+ Tasa bloqueada al desembolsar</div>
+            <div>+ Plazo máximo 48 meses</div>
+            <div>+ Valores correctos en pesos COP</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact impact-cyan mt-5">
+        <span class="font-800 text-cyan-800">📊 Impacto — </span>
+        <span class="text-cyan-900 text-sm">Decisiones crediticias más precisas, conformes con la regulación y con menor riesgo de cartera vencida.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 6 — MENSAJERÍA MASIVA
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-indigo">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <span class="pill pill-indigo mb-3 inline-block">📧 Mensajería Masiva</span>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">
+            Envía campañas a toda la cartera<br>desde el panel, sin tocar código
+          </h2>
+          <p class="text-slate-500 mt-2">Plantillas HTML reutilizables · Wizard de campaña · Resend con fallback</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black text-indigo-400 leading-none select-none">06</div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <div class="space-y-3">
+          <div class="sec-lbl">Lo que se construyó</div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#e0e7ff"><i class="fas fa-envelope-open-text" style="color:#6366F1"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Módulo de campañas completo</div><div class="text-xs text-slate-500">Plantillas · envíos · registro de destinatarios por campaña</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#e0e7ff"><i class="fas fa-magic" style="color:#6366F1"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Wizard de creación en 4 pasos</div><div class="text-xs text-slate-500">Flujo guiado desde el panel de administración</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#e0e7ff"><i class="fas fa-copy" style="color:#6366F1"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Plantillas HTML reutilizables</div><div class="text-xs text-slate-500">Se guardan y reusan en múltiples campañas</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#e0e7ff"><i class="fas fa-random" style="color:#6366F1"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Cuenta Resend fallback</div><div class="text-xs text-slate-500">Si la cuota se agota → redirige automáticamente</div></div>
+          </div>
+        </div>
+
+        <!-- mock panel -->
+        <div class="rounded-xl overflow-hidden" style="border:1px solid #e0e7ff">
+          <div class="flex items-center justify-between px-4 py-3" style="background:#4f46e5">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-paper-plane text-white text-sm"></i>
+              <span class="text-white text-sm font-700">Campañas · Panel Admin</span>
+            </div>
+            <span class="tag" style="background:rgba(255,255,255,.2);color:white">v1.0 — En QA</span>
+          </div>
+          <div class="p-4 space-y-3" style="background:#f5f3ff">
+            <div class="flex gap-2">
+              <div class="flex-1 rounded-lg p-3 bg-white shadow-sm">
+                <div class="text-xs text-slate-400">Campañas activas</div>
+                <div class="text-2xl font-900 text-indigo-600">–</div>
+              </div>
+              <div class="flex-1 rounded-lg p-3 bg-white shadow-sm">
+                <div class="text-xs text-slate-400">Plantillas</div>
+                <div class="text-2xl font-900 text-indigo-600">–</div>
+              </div>
+              <div class="flex-1 rounded-lg p-3 bg-white shadow-sm">
+                <div class="text-xs text-slate-400">Resend</div>
+                <div class="text-2xl font-900 text-emerald-500">OK</div>
+              </div>
+            </div>
+            <div class="rounded-lg p-3 bg-white shadow-sm space-y-2">
+              <div class="text-xs font-700 text-slate-600 mb-2">Wizard — Pasos</div>
+              <div class="flex gap-1">
+                <div class="flex-1 h-1.5 rounded bg-indigo-500"></div>
+                <div class="flex-1 h-1.5 rounded bg-indigo-500"></div>
+                <div class="flex-1 h-1.5 rounded bg-indigo-200"></div>
+                <div class="flex-1 h-1.5 rounded bg-indigo-200"></div>
+              </div>
+              <div class="text-xs text-slate-400">Paso 2 de 4 — Selección de plantilla</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact impact-indigo mt-5">
+        <span class="font-800 text-indigo-800">📧 Impacto — </span>
+        <span class="text-indigo-900 text-sm">El equipo comercial podrá enviar comunicaciones masivas segmentadas sin depender del equipo de desarrollo para cada campaña.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 7 — DECEVAL / PAGARÉ
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-orange">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <span class="pill pill-orange mb-3 inline-block">🏗️ Deceval / Pagaré</span>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">
+            El pagaré se registra solo.<br>Sin VPN, sin intervención, sin pérdidas.
+          </h2>
+          <p class="text-slate-500 mt-2">Cola resiliente en DB · Worker en GitHub Codespace · Auto-mapeo de elegibles</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black text-orange-400 leading-none select-none">07</div>
+      </div>
+
+      <!-- pipeline flow -->
+      <div class="mb-6">
+        <div class="sec-lbl">Pipeline de registro automático</div>
+        <div class="flex items-center gap-0 mb-2">
+          <div class="flow-step">
+            <div class="flow-circle" style="background:#ffedd5"><i class="fas fa-file-signature" style="color:#ea580c;font-size:18px"></i></div>
+            <div class="text-center"><div class="text-xs font-700 text-slate-700">Solicitud aprobada</div><div class="text-xs text-slate-400">Crédito elegible</div></div>
+          </div>
+          <div class="flow-line" style="background:#fed7aa"></div>
+          <div class="flow-step">
+            <div class="flow-circle" style="background:#ffedd5"><i class="fas fa-layer-group" style="color:#ea580c;font-size:18px"></i></div>
+            <div class="text-center"><div class="text-xs font-700 text-slate-700">Cola en DB</div><div class="text-xs text-slate-400">Respaldo persistente</div></div>
+          </div>
+          <div class="flow-line" style="background:#fed7aa"></div>
+          <div class="flow-step">
+            <div class="flow-circle" style="background:#ffedd5"><i class="fab fa-github" style="color:#ea580c;font-size:18px"></i></div>
+            <div class="text-center"><div class="text-xs font-700 text-slate-700">Worker Codespace</div><div class="text-xs text-slate-400">Sin bloqueos de IP</div></div>
+          </div>
+          <div class="flow-line" style="background:#fed7aa"></div>
+          <div class="flow-step">
+            <div class="flow-circle bg-orange-500"><i class="fas fa-university text-white" style="font-size:18px"></i></div>
+            <div class="text-center"><div class="text-xs font-700 text-orange-700">Deceval</div><div class="text-xs text-slate-400">Pagaré registrado</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <div class="sec-lbl">Sistema de cola</div>
+          <div class="chk"><div class="chk-dot" style="background:#F79009">✓</div><span><strong>Cola respaldada en DB</strong> — ningún pagaré se pierde si el worker falla</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#F79009">✓</div><span><strong>Worker en GitHub Codespace</strong> — sin VPN, sin bloqueos IP de Deceval</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#F79009">✓</div><span><strong>Botón de stop</strong> en UI con actualización optimista inmediata</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#F79009">✓</div><span><strong>Race conditions corregidas</strong> — sincronización robusta entre workers</span></div>
+        </div>
+        <div class="space-y-2">
+          <div class="sec-lbl">Gestión de elegibles</div>
+          <div class="chk"><div class="chk-dot" style="background:#F79009">✓</div><span><strong>Endpoint de clientes elegibles</strong> con auto-mapeo desde solicitudes</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#F79009">✓</div><span><strong>Sin intervención manual</strong> para identificar y procesar candidatos</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#F79009">✓</div><span><strong>Credenciales de DB corregidas</strong> en el procesamiento del worker</span></div>
+        </div>
+      </div>
+
+      <div class="impact impact-orange mt-5">
+        <span class="font-800 text-orange-800">🏗️ Impacto — </span>
+        <span class="text-orange-900 text-sm">100% de los pagarés elegibles se registran en Deceval de forma automática. El equipo operativo ya no tiene que ejecutar este proceso a mano.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 8 — SEGMENTACIÓN MANAGER / ASESOR
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-amber">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <span class="pill pill-amber mb-3 inline-block">🏢 Segmentación Manager / Asesor</span>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">
+            Cada gerente ve solo<br>lo de su concesionario, y nada más
+          </h2>
+          <p class="text-slate-500 mt-2">Scoping por rol · Aislamiento de datos · Acceso multi-concesionario para analistas</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black text-amber-400 leading-none select-none">08</div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-5 mb-6">
+        <!-- Analista -->
+        <div class="col-span-1 rounded-2xl p-5 text-center" style="background:#fffbeb;border:2px solid #fde68a">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3" style="background:#f9b91b">
+            <i class="fas fa-user-tie text-white text-xl"></i>
+          </div>
+          <div class="text-sm font-800 text-slate-800 mb-1">Analista</div>
+          <div class="text-xs text-slate-500">Puede seleccionar asesores de <strong>múltiples concesionarios</strong> desde la UI</div>
+          <span class="tag tag-amber mt-2 inline-block">Acceso amplio</span>
+        </div>
+
+        <!-- Managers -->
+        <div class="col-span-2 grid grid-cols-2 gap-4">
+          <div class="rounded-2xl p-4" style="background:#f8fafc;border:1px solid #e2e8f0">
+            <div class="flex items-center gap-2 mb-3">
+              <div class="w-9 h-9 rounded-full bg-slate-300 flex items-center justify-center"><i class="fas fa-building text-slate-600 text-sm"></i></div>
+              <div><div class="text-xs font-800 text-slate-700">Manager — Concesionario A</div></div>
+            </div>
+            <div class="text-xs text-slate-600 space-y-1">
+              <div class="flex items-center gap-2"><i class="fas fa-eye text-emerald-500 text-xs"></i> Ve solicitudes del concesionario A</div>
+              <div class="flex items-center gap-2"><i class="fas fa-eye text-emerald-500 text-xs"></i> Ve asesores del concesionario A</div>
+              <div class="flex items-center gap-2"><i class="fas fa-eye-slash text-red-400 text-xs"></i> No ve datos del concesionario B</div>
+            </div>
+          </div>
+          <div class="rounded-2xl p-4" style="background:#f8fafc;border:1px solid #e2e8f0">
+            <div class="flex items-center gap-2 mb-3">
+              <div class="w-9 h-9 rounded-full bg-slate-300 flex items-center justify-center"><i class="fas fa-building text-slate-600 text-sm"></i></div>
+              <div><div class="text-xs font-800 text-slate-700">Manager — Concesionario B</div></div>
+            </div>
+            <div class="text-xs text-slate-600 space-y-1">
+              <div class="flex items-center gap-2"><i class="fas fa-eye text-emerald-500 text-xs"></i> Ve solicitudes del concesionario B</div>
+              <div class="flex items-center gap-2"><i class="fas fa-eye text-emerald-500 text-xs"></i> Ve asesores del concesionario B</div>
+              <div class="flex items-center gap-2"><i class="fas fa-eye-slash text-red-400 text-xs"></i> No ve datos del concesionario A</div>
+            </div>
+          </div>
+          <div class="col-span-2 rounded-xl p-3" style="background:#fef9c3;border:1px solid #fde047">
+            <div class="text-xs font-700 text-yellow-800"><i class="fas fa-shield-alt mr-1"></i> Fallback de scoping activo</div>
+            <div class="text-xs text-yellow-700 mt-1">Si un asesor no tiene gerente asignado, el sistema aplica scoping predeterminado sin errores en producción</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact impact-amber">
+        <span class="font-800 text-amber-800">🏢 Impacto — </span>
+        <span class="text-amber-900 text-sm">Cada concesionario opera de forma aislada. La expansión a nuevos aliados no compromete la privacidad de datos de los existentes.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 9 — PORTAL DE PAGOS + INFRAESTRUCTURA
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-red">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <span class="pill pill-red mb-3 inline-block">🔐 Pagos + 🧹 Infraestructura</span>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">
+            OTP estable, dark mode y<br>dos dependencias críticas eliminadas
+          </h2>
+          <p class="text-slate-500 mt-2">Hotfixes de producción · Colab → Codespace · Azure → Gemini</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black text-red-400 leading-none select-none">09</div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <!-- Portal de pagos -->
+        <div>
+          <div class="sec-lbl" style="color:#dc2626">Portal de Pagos y OTP</div>
+          <div class="space-y-2">
+            <div class="chk"><div class="chk-dot" style="background:#F04438">✓</div><span><strong>OTP estabilizado</strong> — flujo de verificación sin errores intermitentes</span></div>
+            <div class="chk"><div class="chk-dot" style="background:#F04438">✓</div><span><strong>Settlement mejorado</strong> — liquidación correcta en todos los flujos de pago</span></div>
+            <div class="chk"><div class="chk-dot" style="background:#F04438">✓</div><span><strong>UI rediseñada en dark mode</strong> — consistente con el portal admin</span></div>
+            <div class="chk"><div class="chk-dot" style="background:#F04438">✓</div><span><strong>Endpoint de email de crédito</strong> actualizable desde el bot de soporte</span></div>
+          </div>
+        </div>
+
+        <!-- Infraestructura -->
+        <div>
+          <div class="sec-lbl" style="color:#dc2626">Infraestructura y Calidad</div>
+          <div class="space-y-2">
+            <div class="chk"><div class="chk-dot" style="background:#F04438">✓</div><span><strong>Colab → Codespace</strong> con ejecución paralela, sin tiempos de inactividad</span></div>
+            <div class="chk"><div class="chk-dot" style="background:#F04438">✓</div><span><strong>Azure Vision → Gemini Vision</strong> — misma precisión, menor costo y dependencia</span></div>
+            <div class="chk"><div class="chk-dot" style="background:#F04438">✓</div><span><strong>print() → logger</strong> en 6 módulos — observabilidad real en producción</span></div>
+            <div class="chk"><div class="chk-dot" style="background:#F04438">✓</div><span><strong>Gunicorn 3 → 2 workers</strong> — cero OOM kills en staging</span></div>
+            <div class="chk"><div class="chk-dot" style="background:#F04438">✓</div><span><strong>Scripts Registraduría</strong> con anti-detección stealth y recuperación automática</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- before/after quick wins -->
+      <div class="mt-5 grid grid-cols-4 gap-3">
+        <div class="rounded-xl p-3 text-center" style="background:#fef2f2;border:1px solid #fecaca">
+          <div class="text-lg font-900 text-red-600 line-through">print()</div>
+          <div class="text-xs text-red-700 mt-1">Eliminados en 6 módulos</div>
+        </div>
+        <div class="rounded-xl p-3 text-center" style="background:#fef2f2;border:1px solid #fecaca">
+          <div class="text-lg font-900 text-red-600 line-through">Azure Vision</div>
+          <div class="text-xs text-red-700 mt-1">Reemplazado por Gemini</div>
+        </div>
+        <div class="rounded-xl p-3 text-center" style="background:#fef2f2;border:1px solid #fecaca">
+          <div class="text-lg font-900 text-red-600 line-through">Colab scraping</div>
+          <div class="text-xs text-red-700 mt-1">Migrado a Codespace</div>
+        </div>
+        <div class="rounded-xl p-3 text-center" style="background:#fef2f2;border:1px solid #fecaca">
+          <div class="text-lg font-900 text-red-600 line-through">3 workers</div>
+          <div class="text-xs text-red-700 mt-1">Reducido a 2 → sin OOM</div>
+        </div>
+      </div>
+
+      <div class="impact impact-red mt-5">
+        <span class="font-800 text-red-800">🔐 Impacto — </span>
+        <span class="text-red-900 text-sm">La plataforma es más observable, estable y con menos puntos de fallo. Dos dependencias externas críticas fueron eliminadas.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 10 — MÉTRICAS Y CIERRE
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+    <div class="h-1.5 w-full" style="background:linear-gradient(90deg,#f9b91b,#F79009,#10B981,#2970FF,#6366F1)"></div>
+    <div class="p-8">
+
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <span class="pill pill-amber mb-3 inline-block">📊 Marzo 2026 en Números</span>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">
+            Consolidación con IA, automatización<br>y plataforma más robusta
+          </h2>
+        </div>
+        <div class="text-6xl opacity-10 font-black text-amber-400 leading-none select-none">10</div>
+      </div>
+
+      <!-- kpi row -->
+      <div class="grid grid-cols-5 gap-4 mb-8">
+        <div class="text-center"><div class="kpi-num" style="color:#f9b91b">~400</div><div class="text-sm text-slate-600 font-600">Commits totales</div><div class="text-xs text-slate-400">280 BE + 120 FE</div></div>
+        <div class="text-center"><div class="kpi-num text-emerald-600">8</div><div class="text-sm text-slate-600 font-600">Módulos</div><div class="text-xs text-slate-400">Entregados en el mes</div></div>
+        <div class="text-center"><div class="kpi-num text-blue-600">14</div><div class="text-sm text-slate-600 font-600">Commits/día</div><div class="text-xs text-slate-400">Ritmo sostenido</div></div>
+        <div class="text-center"><div class="kpi-num text-indigo-600">5</div><div class="text-sm text-slate-600 font-600">Contribuidores</div><div class="text-xs text-slate-400">Activos en Marzo</div></div>
+        <div class="text-center"><div class="kpi-num text-red-500">2</div><div class="text-sm text-slate-600 font-600">Hotfixes</div><div class="text-xs text-slate-400">Críticos en producción</div></div>
+      </div>
+
+      <!-- contrib bars -->
+      <div class="mb-6">
+        <div class="sec-lbl">Contribuciones por persona</div>
+        <div class="space-y-2">
+          <div class="flex items-center gap-3">
+            <div class="w-32 text-sm font-600 text-slate-700 text-right">Sebastian Avilés</div>
+            <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:57.8%;background:linear-gradient(90deg,#f9b91b,#e0a410)"></div></div>
+            <div class="w-20 text-sm font-800 text-slate-600">57.8% · ~258</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-32 text-sm font-600 text-slate-700 text-right">Jeferson Camero</div>
+            <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:28.9%;background:linear-gradient(90deg,#2970FF,#004EEB)"></div></div>
+            <div class="w-20 text-sm font-800 text-slate-600">28.9% · ~129</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-32 text-sm font-600 text-slate-700 text-right">Carlos Sebastian</div>
+            <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:12.8%;background:linear-gradient(90deg,#10B981,#059669)"></div></div>
+            <div class="w-20 text-sm font-800 text-slate-600">12.8% · ~57</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-32 text-sm font-600 text-slate-700 text-right">Jose Felipe</div>
+            <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:0.4%;background:#06AED4;min-width:6px"></div></div>
+            <div class="w-20 text-sm font-800 text-slate-600">0.4% · ~2</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- status grid -->
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <div class="sec-lbl">Completado al 100%</div>
+          <div class="grid grid-cols-2 gap-2">
+            <div class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check-circle text-emerald-500 text-xs"></i> Bot de Soporte IA</div>
+            <div class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check-circle text-emerald-500 text-xs"></i> KYC / OCR</div>
+            <div class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check-circle text-emerald-500 text-xs"></i> Journey Unificado</div>
+            <div class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check-circle text-emerald-500 text-xs"></i> Reporte y Modelo</div>
+            <div class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check-circle text-emerald-500 text-xs"></i> Segmentación</div>
+            <div class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check-circle text-emerald-500 text-xs"></i> Portal + Infra</div>
+          </div>
+        </div>
+        <div>
+          <div class="sec-lbl">En curso → Abril 2026</div>
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-clock text-amber-500 text-xs"></i> Mensajería Masiva</div>
+              <span class="tag tag-amber">QA en curso</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-clock text-orange-500 text-xs"></i> Deceval / Pagaré</div>
+              <span class="tag tag-orange">85%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- closing quote -->
+      <div class="mt-6 rounded-2xl p-5" style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #fde68a">
+        <p class="text-slate-800 text-base font-500 leading-relaxed">
+          <span class="font-800" style="color:#d97706">"</span>
+          Marzo 2026 consolidó la plataforma con inteligencia conversacional real, validación de identidad sin fricciones, automatización completa de pagarés y una base técnica más observable y confiable.
+          <span class="font-800" style="color:#d97706">"</span>
+        </p>
+        <div class="flex items-center gap-2 mt-3">
+          <div class="text-sm font-700 text-amber-800">Cashblock × Luky</div>
+          <div class="text-sm text-amber-600">· Equipo de Ingeniería · Marzo 2026</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
