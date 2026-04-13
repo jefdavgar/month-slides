@@ -320,77 +320,84 @@
       </div>
 
       <!-- staircase flow diagram -->
-      <div class="mb-6">
+      <div class="mb-4">
         <div class="sec-lbl">Flujo del journey público — Deudor y Codeudor</div>
-        <div style="position:relative; height:210px; width:100%;">
 
-          <!-- Step 1: Invitación — bottom -->
-          <div style="position:absolute; left:0%; top:158px; width:21%; display:flex; flex-direction:column;">
-            <div style="display:flex; align-items:center;">
-              <div style="width:44px;height:44px;border-radius:50%;background:#d1fae5;border:2px solid #6ee7b7;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;">
-                <i class="fas fa-envelope" style="color:#059669;font-size:16px;"></i>
-              </div>
-              <div style="flex:1;height:3px;background:#a7f3d0;"></div>
+        <!--
+          Escalera: 5 pasos ascendentes de izquierda a derecha.
+          Cada círculo sube 44px respecto al anterior.
+          Los labels quedan FIJOS en la parte inferior (posición absoluta
+          independiente del círculo) para que nunca se solapen.
+          Contenedor: 260px alto = 170px (escalera) + 90px (zona labels)
+        -->
+        <div style="position:relative; height:260px; width:100%;">
+
+          <!-- ── CÍRCULOS + LÍNEAS (zona superior) ─────────────────── -->
+
+          <!-- 1: Deudor — top:170 (más bajo) -->
+          <div style="position:absolute; left:0%; top:170px; display:flex; align-items:center; width:21%;">
+            <div style="width:44px;height:44px;border-radius:50%;background:#f1f5f9;border:2px solid #cbd5e1;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;">
+              <i class="fas fa-file-alt" style="color:#475569;font-size:16px;"></i>
             </div>
-            <div style="margin-top:8px;padding-left:2px;">
-              <div style="font-size:12px;font-weight:700;color:#1e293b;">Invitación</div>
-              <div style="font-size:11px;color:#94a3b8;">Link único al portal</div>
+            <div style="flex:1;height:3px;background:#cbd5e1;"></div>
+          </div>
+
+          <!-- 2: Validación — top:127 -->
+          <div style="position:absolute; left:21%; top:127px; display:flex; align-items:center; width:20%;">
+            <div style="width:44px;height:44px;border-radius:50%;background:#d1fae5;border:2px solid #6ee7b7;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;">
+              <i class="fas fa-check" style="color:#059669;font-size:16px;"></i>
+            </div>
+            <div style="flex:1;height:3px;background:#a7f3d0;"></div>
+          </div>
+
+          <!-- 3: Biometría — top:84 -->
+          <div style="position:absolute; left:41%; top:84px; display:flex; align-items:center; width:20%;">
+            <div style="width:44px;height:44px;border-radius:50%;background:#f1f5f9;border:2px solid #cbd5e1;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;">
+              <i class="fas fa-fingerprint" style="color:#475569;font-size:16px;"></i>
+            </div>
+            <div style="flex:1;height:3px;background:#cbd5e1;"></div>
+          </div>
+
+          <!-- 4: Codeudor — top:41 -->
+          <div style="position:absolute; left:61%; top:41px; display:flex; align-items:center; width:20%;">
+            <div style="width:44px;height:44px;border-radius:50%;background:#f1f5f9;border:2px solid #cbd5e1;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;">
+              <i class="fas fa-user-friends" style="color:#475569;font-size:15px;"></i>
+            </div>
+            <div style="flex:1;height:3px;background:#cbd5e1;"></div>
+          </div>
+
+          <!-- 5: Completado — top:0 (más alto) -->
+          <div style="position:absolute; left:81%; top:0px; display:flex; align-items:center; width:19%;">
+            <div style="width:44px;height:44px;border-radius:50%;background:#10B981;border:2px solid #059669;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;box-shadow:0 0 0 5px #d1fae5;">
+              <i class="fas fa-check-double" style="color:#fff;font-size:14px;"></i>
             </div>
           </div>
 
-          <!-- Step 2: Documentos -->
-          <div style="position:absolute; left:21%; top:118px; width:20%; display:flex; flex-direction:column;">
-            <div style="display:flex; align-items:center;">
-              <div style="width:44px;height:44px;border-radius:50%;background:#d1fae5;border:2px solid #6ee7b7;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;">
-                <i class="fas fa-file-alt" style="color:#059669;font-size:16px;"></i>
-              </div>
-              <div style="flex:1;height:3px;background:#a7f3d0;"></div>
-            </div>
-            <div style="margin-top:8px;padding-left:2px;">
-              <div style="font-size:12px;font-weight:700;color:#1e293b;">Documentos</div>
-              <div style="font-size:11px;color:#94a3b8;">Cobertura obligatoria</div>
-            </div>
+          <!-- ── LABELS FIJOS en zona inferior (evitan solapamiento) ── -->
+
+          <div style="position:absolute; left:0%;   top:220px; width:19%;">
+            <div style="font-size:12px;font-weight:700;color:#1e293b;">Deudor</div>
+            <div style="font-size:11px;color:#94a3b8;">Documentos</div>
           </div>
 
-          <!-- Step 3: Verificación -->
-          <div style="position:absolute; left:41%; top:78px; width:20%; display:flex; flex-direction:column;">
-            <div style="display:flex; align-items:center;">
-              <div style="width:44px;height:44px;border-radius:50%;background:#d1fae5;border:2px solid #6ee7b7;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;">
-                <i class="fas fa-id-card" style="color:#059669;font-size:16px;"></i>
-              </div>
-              <div style="flex:1;height:3px;background:#a7f3d0;"></div>
-            </div>
-            <div style="margin-top:8px;padding-left:2px;">
-              <div style="font-size:12px;font-weight:700;color:#1e293b;">Verificación</div>
-              <div style="font-size:11px;color:#94a3b8;">OCR + MetaMap</div>
-            </div>
+          <div style="position:absolute; left:21%;  top:220px; width:19%;">
+            <div style="font-size:12px;font-weight:700;color:#1e293b;">Validación</div>
+            <div style="font-size:11px;color:#94a3b8;">Verificación de datos</div>
           </div>
 
-          <!-- Step 4: Biometría -->
-          <div style="position:absolute; left:61%; top:38px; width:20%; display:flex; flex-direction:column;">
-            <div style="display:flex; align-items:center;">
-              <div style="width:44px;height:44px;border-radius:50%;background:#d1fae5;border:2px solid #6ee7b7;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;">
-                <i class="fas fa-fingerprint" style="color:#059669;font-size:16px;"></i>
-              </div>
-              <div style="flex:1;height:3px;background:#a7f3d0;"></div>
-            </div>
-            <div style="margin-top:8px;padding-left:2px;">
-              <div style="font-size:12px;font-weight:700;color:#1e293b;">Biometría</div>
-              <div style="font-size:11px;color:#94a3b8;">Liveness + selfie</div>
-            </div>
+          <div style="position:absolute; left:41%;  top:220px; width:19%;">
+            <div style="font-size:12px;font-weight:700;color:#1e293b;">Biometría</div>
+            <div style="font-size:11px;color:#94a3b8;">Confirmación de identidad</div>
           </div>
 
-          <!-- Step 5: Completado — top -->
-          <div style="position:absolute; left:81%; top:0px; width:19%; display:flex; flex-direction:column;">
-            <div style="display:flex; align-items:center;">
-              <div style="width:44px;height:44px;border-radius:50%;background:#10B981;border:2px solid #059669;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;box-shadow:0 0 0 4px #d1fae5;">
-                <i class="fas fa-check" style="color:#fff;font-size:16px;"></i>
-              </div>
-            </div>
-            <div style="margin-top:8px;padding-left:2px;">
-              <div style="font-size:12px;font-weight:700;color:#059669;">✓ Completado</div>
-              <div style="font-size:11px;color:#94a3b8;">Deudor o Codeudor</div>
-            </div>
+          <div style="position:absolute; left:61%;  top:220px; width:19%;">
+            <div style="font-size:12px;font-weight:700;color:#1e293b;">Codeudor</div>
+            <div style="font-size:11px;color:#10B981;font-weight:600;">Mismo flujo</div>
+          </div>
+
+          <div style="position:absolute; left:81%;  top:220px; width:19%;">
+            <div style="font-size:12px;font-weight:700;color:#059669;">✓ Completado</div>
+            <div style="font-size:11px;color:#94a3b8;">Deudor y Codeudor</div>
           </div>
 
         </div>
