@@ -127,7 +127,7 @@
 
       <!-- contributors -->
       <div class="sec-lbl">Equipo</div>
-      <div class="grid grid-cols-5 gap-4">
+      <div class="grid grid-cols-4 gap-6">
         <div class="text-center">
           <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg" style="background:#f9b91b">SA</div>
           <div class="text-sm font-700 text-slate-800">Sebastian Avilés</div>
@@ -147,11 +147,6 @@
           <div class="w-12 h-12 rounded-full bg-indigo-400 flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg">JF</div>
           <div class="text-sm font-700 text-slate-800">Jose Felipe</div>
           <div class="text-xs text-slate-400">0.4% · Puntual</div>
-        </div>
-        <div class="text-center">
-          <div class="w-12 h-12 rounded-full bg-slate-300 flex items-center justify-center mx-auto mb-2 text-slate-500 font-bold text-lg">CX</div>
-          <div class="text-sm font-700 text-slate-800">cgomezfe</div>
-          <div class="text-xs text-slate-400">Combinado con CS</div>
         </div>
       </div>
     </div>
@@ -288,7 +283,7 @@
 
         <!-- right: cedula image -->
         <div class="flex flex-col items-center gap-4">
-          <img src="cedula-colombia.jpeg"
+          <img src="WhatsApp Image 2026-04-13 at 2.55.39 PM.jpeg"
                alt="Cédula de Ciudadanía Colombia"
                class="rounded-2xl shadow-lg w-full max-w-xs object-contain"
                style="border:3px solid #dbeafe">
@@ -324,34 +319,80 @@
         <div class="text-6xl opacity-10 font-black text-emerald-400 leading-none select-none">04</div>
       </div>
 
-      <!-- flow diagram -->
+      <!-- staircase flow diagram -->
       <div class="mb-6">
-        <div class="sec-lbl">Flujo del journey público</div>
-        <div class="flex items-center gap-0">
-          <div class="flow-step">
-            <div class="flow-circle" style="background:#d1fae5"><i class="fas fa-user text-emerald-600 text-xl"></i></div>
-            <div class="text-center"><div class="text-xs font-700 text-slate-700">Invitación</div><div class="text-xs text-slate-400">Link único al portal</div></div>
+        <div class="sec-lbl">Flujo del journey público — Deudor y Codeudor</div>
+        <div style="position:relative; height:210px; width:100%;">
+
+          <!-- Step 1: Invitación — bottom -->
+          <div style="position:absolute; left:0%; top:158px; width:21%; display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center;">
+              <div style="width:44px;height:44px;border-radius:50%;background:#d1fae5;border:2px solid #6ee7b7;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;">
+                <i class="fas fa-envelope" style="color:#059669;font-size:16px;"></i>
+              </div>
+              <div style="flex:1;height:3px;background:#a7f3d0;"></div>
+            </div>
+            <div style="margin-top:8px;padding-left:2px;">
+              <div style="font-size:12px;font-weight:700;color:#1e293b;">Invitación</div>
+              <div style="font-size:11px;color:#94a3b8;">Link único al portal</div>
+            </div>
           </div>
-          <div class="flow-line" style="background:#a7f3d0"></div>
-          <div class="flow-step">
-            <div class="flow-circle" style="background:#d1fae5"><i class="fas fa-file-alt text-emerald-600 text-xl"></i></div>
-            <div class="text-center"><div class="text-xs font-700 text-slate-700">Documentos</div><div class="text-xs text-slate-400">Cobertura obligatoria</div></div>
+
+          <!-- Step 2: Documentos -->
+          <div style="position:absolute; left:21%; top:118px; width:20%; display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center;">
+              <div style="width:44px;height:44px;border-radius:50%;background:#d1fae5;border:2px solid #6ee7b7;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;">
+                <i class="fas fa-file-alt" style="color:#059669;font-size:16px;"></i>
+              </div>
+              <div style="flex:1;height:3px;background:#a7f3d0;"></div>
+            </div>
+            <div style="margin-top:8px;padding-left:2px;">
+              <div style="font-size:12px;font-weight:700;color:#1e293b;">Documentos</div>
+              <div style="font-size:11px;color:#94a3b8;">Cobertura obligatoria</div>
+            </div>
           </div>
-          <div class="flow-line" style="background:#a7f3d0"></div>
-          <div class="flow-step">
-            <div class="flow-circle" style="background:#d1fae5"><i class="fas fa-id-card text-emerald-600 text-xl"></i></div>
-            <div class="text-center"><div class="text-xs font-700 text-slate-700">Verificación</div><div class="text-xs text-slate-400">OCR + MetaMap</div></div>
+
+          <!-- Step 3: Verificación -->
+          <div style="position:absolute; left:41%; top:78px; width:20%; display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center;">
+              <div style="width:44px;height:44px;border-radius:50%;background:#d1fae5;border:2px solid #6ee7b7;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;">
+                <i class="fas fa-id-card" style="color:#059669;font-size:16px;"></i>
+              </div>
+              <div style="flex:1;height:3px;background:#a7f3d0;"></div>
+            </div>
+            <div style="margin-top:8px;padding-left:2px;">
+              <div style="font-size:12px;font-weight:700;color:#1e293b;">Verificación</div>
+              <div style="font-size:11px;color:#94a3b8;">OCR + MetaMap</div>
+            </div>
           </div>
-          <div class="flow-line" style="background:#a7f3d0"></div>
-          <div class="flow-step">
-            <div class="flow-circle" style="background:#d1fae5"><i class="fas fa-fingerprint text-emerald-600 text-xl"></i></div>
-            <div class="text-center"><div class="text-xs font-700 text-slate-700">Biometría</div><div class="text-xs text-slate-400">Liveness + selfie</div></div>
+
+          <!-- Step 4: Biometría -->
+          <div style="position:absolute; left:61%; top:38px; width:20%; display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center;">
+              <div style="width:44px;height:44px;border-radius:50%;background:#d1fae5;border:2px solid #6ee7b7;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;">
+                <i class="fas fa-fingerprint" style="color:#059669;font-size:16px;"></i>
+              </div>
+              <div style="flex:1;height:3px;background:#a7f3d0;"></div>
+            </div>
+            <div style="margin-top:8px;padding-left:2px;">
+              <div style="font-size:12px;font-weight:700;color:#1e293b;">Biometría</div>
+              <div style="font-size:11px;color:#94a3b8;">Liveness + selfie</div>
+            </div>
           </div>
-          <div class="flow-line" style="background:#a7f3d0"></div>
-          <div class="flow-step">
-            <div class="flow-circle bg-emerald-500"><i class="fas fa-check text-white text-xl"></i></div>
-            <div class="text-center"><div class="text-xs font-700 text-emerald-700">Completado</div><div class="text-xs text-slate-400">Deudor o Codeudor</div></div>
+
+          <!-- Step 5: Completado — top -->
+          <div style="position:absolute; left:81%; top:0px; width:19%; display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center;">
+              <div style="width:44px;height:44px;border-radius:50%;background:#10B981;border:2px solid #059669;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;box-shadow:0 0 0 4px #d1fae5;">
+                <i class="fas fa-check" style="color:#fff;font-size:16px;"></i>
+              </div>
+            </div>
+            <div style="margin-top:8px;padding-left:2px;">
+              <div style="font-size:12px;font-weight:700;color:#059669;">✓ Completado</div>
+              <div style="font-size:11px;color:#94a3b8;">Deudor o Codeudor</div>
+            </div>
           </div>
+
         </div>
       </div>
 
