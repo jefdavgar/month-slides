@@ -113,14 +113,14 @@
       <!-- kpi grid -->
       <div class="grid grid-cols-4 gap-5 mb-8">
         <div class="rounded-2xl p-5 accent-amber" style="background:#fffbeb">
-          <div class="kpi-num" style="color:#f9b91b">~600</div>
-          <div class="text-sm font-600 text-slate-600 mt-1">Commits Backend</div>
-          <div class="text-xs text-slate-400">Django · APIs · Workers</div>
+          <div class="kpi-num" style="color:#f9b91b">1285</div>
+          <div class="text-sm font-600 text-slate-600 mt-1">Commits totales Q1</div>
+          <div class="text-xs text-slate-400">858 BE · 427 FE</div>
         </div>
         <div class="rounded-2xl p-5 accent-blue" style="background:#eff6ff">
-          <div class="kpi-num text-blue-600">~280</div>
-          <div class="text-sm font-600 text-slate-600 mt-1">Commits Frontend</div>
-          <div class="text-xs text-slate-400">React · MUI · Hooks</div>
+          <div class="kpi-num text-blue-600">226</div>
+          <div class="text-sm font-600 text-slate-600 mt-1">PRs a master</div>
+          <div class="text-xs text-slate-400">142 BE · 84 FE · deploy continuo</div>
         </div>
         <div class="rounded-2xl p-5 accent-green" style="background:#f0fdf4">
           <div class="kpi-num text-emerald-600">20+</div>
@@ -1537,11 +1537,11 @@
 
       <!-- kpi row -->
       <div class="grid grid-cols-6 gap-3 mb-7">
-        <div class="text-center"><div class="kpi-sm" style="color:#f9b91b">~880</div><div class="text-xs text-slate-600 font-600 mt-1">Commits totales</div><div class="text-xs text-slate-400">600 BE + 280 FE</div></div>
-        <div class="text-center"><div class="kpi-sm text-emerald-600">20+</div><div class="text-xs text-slate-600 font-600 mt-1">Módulos</div><div class="text-xs text-slate-400">Q1 completo</div></div>
+        <div class="text-center"><div class="kpi-sm" style="color:#f9b91b">1285</div><div class="text-xs text-slate-600 font-600 mt-1">Commits totales</div><div class="text-xs text-slate-400">858 BE · 427 FE</div></div>
+        <div class="text-center"><div class="kpi-sm text-emerald-600">226</div><div class="text-xs text-slate-600 font-600 mt-1">PRs a master</div><div class="text-xs text-slate-400">72 días activos</div></div>
         <div class="text-center"><div class="kpi-sm text-blue-600">12+</div><div class="text-xs text-slate-600 font-600 mt-1">Integraciones</div><div class="text-xs text-slate-400">APIs externas</div></div>
         <div class="text-center"><div class="kpi-sm text-indigo-600">5</div><div class="text-xs text-slate-600 font-600 mt-1">Contribuidores</div><div class="text-xs text-slate-400">Activos</div></div>
-        <div class="text-center"><div class="kpi-sm text-red-500">4+</div><div class="text-xs text-slate-600 font-600 mt-1">Hotfixes prod</div><div class="text-xs text-slate-400">Críticos</div></div>
+        <div class="text-center"><div class="kpi-sm text-red-500">29+</div><div class="text-xs text-slate-600 font-600 mt-1">Hotfixes</div><div class="text-xs text-slate-400">Críticos</div></div>
         <div class="text-center"><div class="kpi-sm text-purple-600">3</div><div class="text-xs text-slate-600 font-600 mt-1">Deps eliminadas</div><div class="text-xs text-slate-400">Azure/Colab/Pi</div></div>
       </div>
 
@@ -1632,17 +1632,23 @@
 <!-- Auto-inject logo bar into every slide -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  // Target the inner content div of every slide (p-8 or p-10)
   document.querySelectorAll('.slide').forEach(function (slide) {
-    var inner = slide.querySelector('[class*="p-8"], [class*="p-10"]');
-    if (!inner) return;
+    // .slide > div (card wrapper) > last div child (content area)
+    var card = slide.children[0];
+    if (!card) return;
+    var content = null;
+    var kids = card.children;
+    for (var i = kids.length - 1; i >= 0; i--) {
+      if (kids[i].tagName === 'DIV') { content = kids[i]; break; }
+    }
+    if (!content) return;
     var bar = document.createElement('div');
     bar.className = 'slide-logo-bar';
     bar.innerHTML =
-      '<img src="cashblock-logo.png" style="height:24px;" alt="Cashblock">' +
+      '<img src="cashblock-logo.png" style="height:26px;max-width:120px;" alt="Cashblock">' +
       '<div class="lbar-sep"></div>' +
-      '<img src="metaluky-logo.png" style="height:22px;" alt="MetaLuky">';
-    inner.appendChild(bar);
+      '<img src="metaluky-logo.png" style="height:24px;max-width:100px;" alt="MetaLuky">';
+    content.appendChild(bar);
   });
 });
 </script>
