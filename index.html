@@ -75,6 +75,19 @@
     /* month divider */
     .month-divider { display:flex;align-items:center;gap:16px;padding:6px 0 }
     .month-divider::before,.month-divider::after { content:'';flex:1;height:2px;background:#e2e8f0 }
+
+    /* logo bar injected into every slide */
+    .slide-logo-bar {
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:10px;
+      margin-top:14px;
+      padding-top:10px;
+      border-top:1px solid #f1f5f9;
+    }
+    .slide-logo-bar img { object-fit:contain; opacity:.85; }
+    .slide-logo-bar .lbar-sep { width:1px; height:20px; background:#e2e8f0; flex-shrink:0; }
   </style>
 </head>
 <body>
@@ -128,7 +141,7 @@
           <div class="rounded-2xl p-4" style="background:#fffbeb;border:2px solid #fde68a">
             <div class="flex items-center gap-2 mb-3"><span class="pill pill-amber text-xs">Enero</span><span class="tag tag-prod">Producción</span></div>
             <div class="text-xs text-slate-600 space-y-1">
-              <div>🧬 Lukify — Biometría propia (MetaMap)</div>
+              <div>🧬 MetaLuky — Biometría propia (MetaMap)</div>
               <div>📊 DataCrédito Live API (UAT/PROD)</div>
               <div>🏛️ Validaciones gubernamentales</div>
               <div>💳 Portal de pagos AvalPay</div>
@@ -187,7 +200,7 @@
 </div>
 
 <!-- ═══════════════════════════════════════════
-     SLIDE 2 — ENERO: Lukify / Biometría propia
+     SLIDE 2 — ENERO: MetaLuky / Biometría propia
 ═══════════════════════════════════════════════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-blue">
@@ -198,11 +211,11 @@
             <span class="pill pill-month">Enero 2026</span>
             <span class="tag tag-prod">✓ Producción</span>
           </div>
-          <span class="pill pill-blue mb-3 inline-block">🧬 Lukify — Identidad Biométrica Propia</span>
+          <span class="pill pill-blue mb-3 inline-block">🧬 MetaLuky — Identidad Biométrica Propia</span>
           <h2 class="text-3xl font-black text-slate-900 leading-tight">
             Motor propio de verificación:<br>liveness, OCR y face matching sin MetaMap
           </h2>
-          <p class="text-slate-500 mt-2">Lukify · Gemini OCR · DeepFace · Challengers de movimiento · Anti-fraude</p>
+          <p class="text-slate-500 mt-2">MetaLuky · Gemini OCR · DeepFace · Challengers de movimiento · Anti-fraude</p>
         </div>
         <div class="text-6xl opacity-10 font-black text-blue-400 leading-none select-none">02</div>
       </div>
@@ -1143,7 +1156,196 @@
 </div>
 
 <!-- ═══════════════════════════════════════════
-     SLIDE 14 — BASES IA & PROYECCIÓN Q2-Q3
+     SLIDE 14 — RELEASES & PRIORIZADOS Q1 2026
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-amber">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-5">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Q1 2026</span>
+            <span class="tag tag-prod">✓ Producción</span>
+          </div>
+          <span class="pill pill-amber mb-3 inline-block">🚀 Releases &amp; Priorizados</span>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">
+            226 PRs mergeados · 4 deploys a producción<br>y los entregables clave del trimestre
+          </h2>
+        </div>
+        <div class="text-6xl opacity-10 font-black text-amber-400 leading-none select-none">14</div>
+      </div>
+
+      <!-- KPI row -->
+      <div class="grid grid-cols-5 gap-3 mb-5">
+        <div class="rounded-2xl p-3 text-center" style="background:#fffbeb;border:1px solid #fde68a">
+          <div class="text-2xl font-black" style="color:#d97706">226</div>
+          <div class="text-xs font-700 text-slate-700 mt-0.5">PRs mergeados</div>
+          <div class="text-xs text-slate-400">142 BE · 84 FE</div>
+        </div>
+        <div class="rounded-2xl p-3 text-center" style="background:#f0fdf4;border:1px solid #bbf7d0">
+          <div class="text-2xl font-black text-emerald-600">4</div>
+          <div class="text-xs font-700 text-slate-700 mt-0.5">Deploys prod</div>
+          <div class="text-xs text-slate-400">develop → master</div>
+        </div>
+        <div class="rounded-2xl p-3 text-center" style="background:#fef3f2;border:1px solid #fecaca">
+          <div class="text-2xl font-black text-red-500">29+</div>
+          <div class="text-xs font-700 text-slate-700 mt-0.5">Hotfixes</div>
+          <div class="text-xs text-slate-400">15 BE · 14 FE</div>
+        </div>
+        <div class="rounded-2xl p-3 text-center" style="background:#eff6ff;border:1px solid #bfdbfe">
+          <div class="text-2xl font-black text-blue-600">5</div>
+          <div class="text-xs font-700 text-slate-700 mt-0.5">SCRUM tickets</div>
+          <div class="text-xs text-slate-400">priorizados</div>
+        </div>
+        <div class="rounded-2xl p-3 text-center" style="background:#f5f3ff;border:1px solid #ddd6fe">
+          <div class="text-2xl font-black text-purple-600">1285</div>
+          <div class="text-xs font-700 text-slate-700 mt-0.5">Commits totales</div>
+          <div class="text-xs text-slate-400">858 BE · 427 FE</div>
+        </div>
+      </div>
+
+      <!-- Timeline de deploys + priorizados por mes -->
+      <div class="grid grid-cols-3 gap-4 mb-4">
+
+        <!-- ENERO -->
+        <div style="border:1px solid #e2e8f0;border-radius:14px;padding:14px;background:#fafafa;">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill-month" style="background:#f9b91b;color:#1e293b;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:800">Enero</span>
+            <span style="font-size:10px;color:#94a3b8;font-weight:600">Deploy: 30 ene</span>
+          </div>
+          <div class="space-y-1.5">
+            <div class="flex items-start gap-2">
+              <span style="color:#059669;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700"><strong>SCRUM-56</strong> AvalPay portal de pagos</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color:#059669;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700"><strong>SCRUM-183</strong> Modelo de decisión DataCrédito</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color:#059669;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700">MetaLuky integración biometría (69 PRs BE)</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color:#059669;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700">Registraduría auto-rechazo cédula no vigente</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color:#059669;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700">DataCrédito UAT → PROD (credenciales reales)</span>
+            </div>
+            <div class="flex items-start gap-2 mt-2 pt-2" style="border-top:1px dashed #e2e8f0">
+              <span style="color:#ef4444;font-size:10px;margin-top:2px;flex-shrink:0">🔥</span>
+              <span class="text-xs text-slate-500">7 hotfixes críticos (CSRF, OTP, Null analyst, biometría)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FEBRERO -->
+        <div style="border:1px solid #e2e8f0;border-radius:14px;padding:14px;background:#fafafa;">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill-month" style="background:#f9b91b;color:#1e293b;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:800">Febrero</span>
+            <span style="font-size:10px;color:#94a3b8;font-weight:600">Deploy: 24 feb</span>
+          </div>
+          <div class="space-y-1.5">
+            <div class="flex items-start gap-2">
+              <span style="color:#2563eb;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700">Face matching DeepFace activo en producción</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color:#2563eb;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700">Gemini OCR embebido (reemplaza Colab externo)</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color:#2563eb;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700">OTP emails habilitados en producción</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color:#2563eb;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700">Deceval Selenium — creación de girador</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color:#2563eb;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700">DataCrédito Síntesis batch + documentos vehiculares</span>
+            </div>
+            <div class="flex items-start gap-2 mt-2 pt-2" style="border-top:1px dashed #e2e8f0">
+              <span style="color:#ef4444;font-size:10px;margin-top:2px;flex-shrink:0">🔥</span>
+              <span class="text-xs text-slate-500">5 hotfixes (flake8, DataCrédito null, Chrome zombie, GEMINI_KEY)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MARZO -->
+        <div style="border:1px solid #e2e8f0;border-radius:14px;padding:14px;background:#fafafa;">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill-month" style="background:#f9b91b;color:#1e293b;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:800">Marzo</span>
+            <span style="font-size:10px;color:#94a3b8;font-weight:600">Deploys: 4 mar · 9 mar</span>
+          </div>
+          <div class="space-y-1.5">
+            <div class="flex items-start gap-2">
+              <span style="color:#7c3aed;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700">Bot IA soporte (RAG + Gemini + Tavily) en prod</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color:#7c3aed;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700"><strong>SCRUM-260</strong> Plazo máx. 72→48 meses</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color:#7c3aed;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700"><strong>SCRUM-258/261</strong> Antigüedad laboral + corte DataCrédito</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color:#7c3aed;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700">GCP VM reemplaza Colab scraping (0 dependencias externas)</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color:#7c3aed;font-size:10px;margin-top:2px;flex-shrink:0">●</span>
+              <span class="text-xs text-slate-700">Segmentación Gerente-Asesor + multi-concesionario</span>
+            </div>
+            <div class="flex items-start gap-2 mt-2 pt-2" style="border-top:1px dashed #e2e8f0">
+              <span style="color:#ef4444;font-size:10px;margin-top:2px;flex-shrink:0">🔥</span>
+              <span class="text-xs text-slate-500">8 hotfixes (race condition firma, OOM workers, google-genai 1.0)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom strip: deploy timeline visual -->
+      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:12px 16px;">
+        <div class="text-xs font-700 text-slate-500 uppercase tracking-wide mb-2">Timeline de deploys a producción (develop → master)</div>
+        <div style="position:relative;height:28px;">
+          <!-- base line -->
+          <div style="position:absolute;top:50%;left:0;right:0;height:2px;background:#e2e8f0;transform:translateY(-50%);border-radius:2px;"></div>
+          <!-- Jan 30 -->
+          <div style="position:absolute;left:14%;top:50%;transform:translate(-50%,-50%);">
+            <div style="width:12px;height:12px;border-radius:50%;background:#f9b91b;border:2px solid #d97706;box-shadow:0 0 0 3px #fef3c7;"></div>
+          </div>
+          <div style="position:absolute;left:14%;top:100%;transform:translateX(-50%);font-size:9px;color:#92400e;font-weight:700;white-space:nowrap;margin-top:3px;">30 ene</div>
+          <!-- Feb 24 -->
+          <div style="position:absolute;left:40%;top:50%;transform:translate(-50%,-50%);">
+            <div style="width:12px;height:12px;border-radius:50%;background:#2563eb;border:2px solid #1d4ed8;box-shadow:0 0 0 3px #dbeafe;"></div>
+          </div>
+          <div style="position:absolute;left:40%;top:100%;transform:translateX(-50%);font-size:9px;color:#1e40af;font-weight:700;white-space:nowrap;margin-top:3px;">24 feb</div>
+          <!-- Mar 4 -->
+          <div style="position:absolute;left:66%;top:50%;transform:translate(-50%,-50%);">
+            <div style="width:12px;height:12px;border-radius:50%;background:#7c3aed;border:2px solid #6d28d9;box-shadow:0 0 0 3px #ede9fe;"></div>
+          </div>
+          <div style="position:absolute;left:66%;top:100%;transform:translateX(-50%);font-size:9px;color:#5b21b6;font-weight:700;white-space:nowrap;margin-top:3px;">4 mar</div>
+          <!-- Mar 9 -->
+          <div style="position:absolute;left:82%;top:50%;transform:translate(-50%,-50%);">
+            <div style="width:14px;height:14px;border-radius:50%;background:#10B981;border:2px solid #059669;box-shadow:0 0 0 3px #d1fae5;"></div>
+          </div>
+          <div style="position:absolute;left:82%;top:100%;transform:translateX(-50%);font-size:9px;color:#065f46;font-weight:700;white-space:nowrap;margin-top:3px;">9 mar ✓</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 15 — BASES IA & PROYECCIÓN Q2-Q3
 ═══════════════════════════════════════════════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto rounded-3xl shadow-xl overflow-hidden"
@@ -1160,7 +1362,7 @@
           </h2>
           <p class="mt-2" style="color:#94a3b8">Infraestructura inteligente activa en producción · Modelos propios en camino</p>
         </div>
-        <div class="text-6xl opacity-10 font-black text-purple-400 leading-none select-none">14</div>
+        <div class="text-6xl opacity-10 font-black text-purple-400 leading-none select-none">15</div>
       </div>
 
       <div class="grid grid-cols-2 gap-6">
@@ -1222,7 +1424,7 @@
                   <i class="fas fa-fingerprint" style="color:#60a5fa;font-size:13px"></i>
                 </div>
                 <div style="flex:1;min-width:0">
-                  <div class="text-sm font-700" style="color:#e2e8f0">Lukify — Biometría facial propia</div>
+                  <div class="text-sm font-700" style="color:#e2e8f0">MetaLuky — Biometría facial propia</div>
                   <div class="text-xs" style="color:#64748b">Liveness check · sin dependencia de terceros</div>
                 </div>
                 <span class="tag tag-prod" style="flex-shrink:0;font-size:9px">Prod</span>
@@ -1309,7 +1511,7 @@
             Identidad biométrica, buró en tiempo real,<br>IA conversacional y automatización de pagarés
           </h2>
         </div>
-        <div class="text-6xl opacity-10 font-black text-amber-400 leading-none select-none">15</div>
+        <div class="text-6xl opacity-10 font-black text-amber-400 leading-none select-none">16</div>
       </div>
 
       <!-- kpi row -->
@@ -1349,7 +1551,7 @@
         <div>
           <div class="sec-lbl">Enero — Entregado</div>
           <div class="space-y-1">
-            <div class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check-circle text-emerald-500 text-xs"></i> Lukify biometría propia</div>
+            <div class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check-circle text-emerald-500 text-xs"></i> MetaLuky biometría propia</div>
             <div class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check-circle text-emerald-500 text-xs"></i> DataCrédito Live API</div>
             <div class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check-circle text-emerald-500 text-xs"></i> Validaciones gubernamentales</div>
             <div class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check-circle text-emerald-500 text-xs"></i> Portal de pagos AvalPay</div>
@@ -1406,5 +1608,22 @@
   </div>
 </div>
 
+<!-- Auto-inject logo bar into every slide -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Target the inner content div of every slide (p-8 or p-10)
+  document.querySelectorAll('.slide').forEach(function (slide) {
+    var inner = slide.querySelector('[class*="p-8"], [class*="p-10"]');
+    if (!inner) return;
+    var bar = document.createElement('div');
+    bar.className = 'slide-logo-bar';
+    bar.innerHTML =
+      '<img src="cashblock-logo.png" style="height:24px;" alt="Cashblock">' +
+      '<div class="lbar-sep"></div>' +
+      '<img src="metaluky-logo.png" style="height:22px;" alt="MetaLuky">';
+    inner.appendChild(bar);
+  });
+});
+</script>
 </body>
 </html>
