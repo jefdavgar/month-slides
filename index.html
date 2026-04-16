@@ -317,7 +317,68 @@
 </div>
 
 <!-- ═══════════════════════════════════════════
-     SLIDE 3 — DataCrédito & Modelo de Decisión
+     SLIDE 3 — Validaciones Gubernamentales
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-amber">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Enero 2026</span>
+            <span class="tag tag-prod">✓ Producción</span>
+          </div>
+          <span class="pill pill-amber mb-3 inline-block">🏛️ Validaciones Gubernamentales</span>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">
+            Registraduría, Procuraduría, OFAC —<br>rechazo automático antes del analista
+          </h2>
+          <p class="text-slate-500 mt-2">Scraping inteligente · Scores ponderados configurables · Auto-rechazo por criterios críticos</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black text-amber-400 leading-none select-none">03</div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <div class="sec-lbl">Fuentes activas integradas</div>
+          <div class="chk"><div class="chk-dot" style="background:#f9b91b">✓</div><span><strong>Registraduría Nacional</strong> <span class="tag tag-prod">Crítica</span> — auto-rechazo si cédula no vigente</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#f9b91b">✓</div><span><strong>Procuraduría General</strong> <span class="tag tag-prod">Crítica</span> — movida a GitHub Codespace, sin proxy físico</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#f9b91b">✓</div><span><strong>Movilidad Bogotá</strong> — comparendos como criterio configurable</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#f9b91b">✓</div><span><strong>ADRES / EPS</strong> — verifica afiliación al sistema de salud</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#f9b91b">✓</div><span><strong>OFAC + SECO</strong> — listas internacionales de sanciones y PEPs</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#f9b91b">✓</div><span><strong>Rama Judicial</strong> — procesos penales activos</span></div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="sec-lbl">Sistema de Scoring Configurable</div>
+          <div class="rounded-xl p-4" style="background:#fffbeb;border:1px solid #fde68a">
+            <div class="text-xs text-amber-900 space-y-1">
+              <div>Pesos y thresholds ajustables desde <strong>Django Admin</strong></div>
+              <div>Modo "ignorar" por validación sin afectar score global</div>
+              <div>Validaciones críticas → rechazo automático instantáneo</div>
+            </div>
+          </div>
+          <div class="rounded-xl p-4" style="background:#dbeafe;border:1px solid #93c5fd">
+            <div class="flex items-center gap-2 mb-2"><span class="tag tag-dev">→ Roadmap</span><span class="text-xs font-700 text-blue-800">Próximas integraciones Q2-Q3</span></div>
+            <div class="text-xs text-blue-900 space-y-1">
+              <div><span style="color:#f9b91b">→</span> Truora — verificación avanzada de identidad</div>
+              <div><span style="color:#f9b91b">→</span> IPQS — detección de fraude por IP y comportamiento</div>
+              <div><span style="color:#f9b91b">→</span> RUNT — validación de vehículos</div>
+              <div><span style="color:#f9b91b">→</span> Open Finance — historial bancario</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact impact-amber mt-5">
+        <span class="font-800 text-amber-800">🏛️ Impacto — </span>
+        <span class="text-amber-900 text-sm">Personas con cédula vencida, sancionadas o en listas internacionales son rechazadas automáticamente. El analista solo ve solicitudes limpias.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 4 — DataCrédito & Modelo de Decisión
 ═══════════════════════════════════════════════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-cyan">
@@ -334,7 +395,7 @@
           </h2>
           <p class="text-slate-500 mt-2">Live API · Síntesis batch · Score · Modelo actualizado · Reglas de negocio</p>
         </div>
-        <div class="text-6xl opacity-10 font-black text-cyan-400 leading-none select-none">03</div>
+        <div class="text-6xl opacity-10 font-black text-cyan-400 leading-none select-none">04</div>
       </div>
 
       <div class="grid grid-cols-3 gap-5 mb-5">
@@ -376,67 +437,6 @@
       <div class="impact impact-cyan">
         <span class="font-800 text-cyan-800">📊 Impacto — </span>
         <span class="text-cyan-900 text-sm">Las decisiones de crédito se basan en datos reales del buró, en tiempo real, con reglas calibradas y tasas que no cambian después de aprobadas.</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════════
-     SLIDE 4 — Validaciones Gubernamentales
-═══════════════════════════════════════════════ -->
-<div class="slide px-10 py-8">
-  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-amber">
-    <div class="p-8">
-      <div class="flex items-start justify-between mb-6">
-        <div>
-          <div class="flex items-center gap-2 mb-3">
-            <span class="pill pill-month">Enero 2026</span>
-            <span class="tag tag-prod">✓ Producción</span>
-          </div>
-          <span class="pill pill-amber mb-3 inline-block">🏛️ Validaciones Gubernamentales</span>
-          <h2 class="text-3xl font-black text-slate-900 leading-tight">
-            Registraduría, Procuraduría, OFAC —<br>rechazo automático antes del analista
-          </h2>
-          <p class="text-slate-500 mt-2">Scraping inteligente · Scores ponderados configurables · Auto-rechazo por criterios críticos</p>
-        </div>
-        <div class="text-6xl opacity-10 font-black text-amber-400 leading-none select-none">04</div>
-      </div>
-
-      <div class="grid grid-cols-2 gap-6">
-        <div class="space-y-2">
-          <div class="sec-lbl">Fuentes activas integradas</div>
-          <div class="chk"><div class="chk-dot" style="background:#f9b91b">✓</div><span><strong>Registraduría Nacional</strong> <span class="tag tag-prod">Crítica</span> — auto-rechazo si cédula no vigente</span></div>
-          <div class="chk"><div class="chk-dot" style="background:#f9b91b">✓</div><span><strong>Procuraduría General</strong> <span class="tag tag-prod">Crítica</span> — movida a GitHub Codespace, sin proxy físico</span></div>
-          <div class="chk"><div class="chk-dot" style="background:#f9b91b">✓</div><span><strong>Movilidad Bogotá</strong> — comparendos como criterio configurable</span></div>
-          <div class="chk"><div class="chk-dot" style="background:#f9b91b">✓</div><span><strong>ADRES / EPS</strong> — verifica afiliación al sistema de salud</span></div>
-          <div class="chk"><div class="chk-dot" style="background:#f9b91b">✓</div><span><strong>OFAC + SECO</strong> — listas internacionales de sanciones y PEPs</span></div>
-          <div class="chk"><div class="chk-dot" style="background:#f9b91b">✓</div><span><strong>Rama Judicial</strong> — procesos penales activos</span></div>
-        </div>
-
-        <div class="space-y-3">
-          <div class="sec-lbl">Sistema de Scoring Configurable</div>
-          <div class="rounded-xl p-4" style="background:#fffbeb;border:1px solid #fde68a">
-            <div class="text-xs text-amber-900 space-y-1">
-              <div>Pesos y thresholds ajustables desde <strong>Django Admin</strong></div>
-              <div>Modo "ignorar" por validación sin afectar score global</div>
-              <div>Validaciones críticas → rechazo automático instantáneo</div>
-            </div>
-          </div>
-          <div class="rounded-xl p-4" style="background:#dbeafe;border:1px solid #93c5fd">
-            <div class="flex items-center gap-2 mb-2"><span class="tag tag-dev">→ Roadmap</span><span class="text-xs font-700 text-blue-800">Próximas integraciones Q2-Q3</span></div>
-            <div class="text-xs text-blue-900 space-y-1">
-              <div><span style="color:#f9b91b">→</span> Truora — verificación avanzada de identidad</div>
-              <div><span style="color:#f9b91b">→</span> IPQS — detección de fraude por IP y comportamiento</div>
-              <div><span style="color:#f9b91b">→</span> RUNT — validación de vehículos</div>
-              <div><span style="color:#f9b91b">→</span> Open Finance — historial bancario</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="impact impact-amber mt-5">
-        <span class="font-800 text-amber-800">🏛️ Impacto — </span>
-        <span class="text-amber-900 text-sm">Personas con cédula vencida, sancionadas o en listas internacionales son rechazadas automáticamente. El analista solo ve solicitudes limpias.</span>
       </div>
     </div>
   </div>
