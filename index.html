@@ -530,7 +530,75 @@
 </div>
 
 <!-- ═══════════════════════════════════════════
-     SLIDE 6 — FEBRERO: Deceval + DataCrédito Síntesis
+     SLIDE 6 — PORTAL DE PAGOS: AvalPay Q1
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden" style="border-top:4px solid #0ea5e9">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-5">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Enero → Marzo 2026</span>
+            <span class="tag tag-prod">✓ Producción</span>
+          </div>
+          <span class="pill mb-3 inline-block" style="background:#e0f2fe;color:#0369a1;border:1px solid #bae6fd">💳 Portal de Pagos — AvalPay</span>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">
+            Del email al pago confirmado<br>sin login, sin fricción
+          </h2>
+          <p class="text-slate-500 mt-2">OTP · SHA-256 · Amortización automática · Plan de pagos · Pago total</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:#0ea5e9">06</div>
+      </div>
+
+      <!-- Evolución Q1 -->
+      <div class="flex items-center gap-2 mb-5">
+        <div class="flex-1 rounded-xl p-3 text-center" style="background:#f0f9ff;border:1px solid #bae6fd">
+          <div class="text-xs font-800 text-sky-700 mb-1">Enero</div>
+          <div class="text-xs text-slate-600">Portal live · OTP sin login · Credenciales por entorno · Retry y expiración de pagos</div>
+        </div>
+        <div style="color:#94a3b8;font-size:18px">→</div>
+        <div class="flex-1 rounded-xl p-3 text-center" style="background:#f0fdf4;border:1px solid #bbf7d0">
+          <div class="text-xs font-800 text-emerald-700 mb-1">Febrero</div>
+          <div class="text-xs text-slate-600">OTP activado en prod · Plan de pagos en email · Botón de pago en recordatorio · Sync editable</div>
+        </div>
+        <div style="color:#94a3b8;font-size:18px">→</div>
+        <div class="flex-1 rounded-xl p-3 text-center" style="background:#fff7ed;border:1px solid #fed7aa">
+          <div class="text-xs font-800 text-orange-700 mb-1">Marzo</div>
+          <div class="text-xs text-slate-600">Pago total del crédito · Estabilización OTP · Fix mobile · Dark UI refinada · Null-safety</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <!-- Left -->
+        <div class="space-y-3">
+          <div class="sec-lbl">Funcionalidades del portal</div>
+          <div class="chk"><div class="chk-dot" style="background:#0ea5e9">✓</div><span><strong>OTP sin login</strong> — el cliente paga desde un enlace en su email, sin crear cuenta</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#0ea5e9">✓</div><span><strong>SHA-256 en callbacks</strong> — cada notificación de AvalPay es verificada criptográficamente</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#0ea5e9">✓</div><span><strong>Retry y expiración</strong> — detecta pagos duplicados y transacciones caducadas</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#0ea5e9">✓</div><span><strong>Prepago y amortización</strong> — cuota recalculada correctamente según el modelo</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#0ea5e9">✓</div><span><strong>Sync editable desde admin</strong> — programación de sincronización configurable</span></div>
+        </div>
+        <!-- Right -->
+        <div class="space-y-3">
+          <div class="sec-lbl">Mejoras y nuevas capacidades</div>
+          <div class="chk"><div class="chk-dot" style="background:#0369a1">✓</div><span><strong>Plan de pagos en email</strong> — se envía automáticamente al desembolsar el crédito</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#0369a1">✓</div><span><strong>Pago total del crédito</strong> — nueva opción para cancelar el saldo completo en un pago</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#0369a1">✓</div><span><strong>Multi-tipo de documento</strong> — cédula, cédula extranjera y pasaporte soportados</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#0369a1">✓</div><span><strong>Portal responsive</strong> — optimizado para celular con dark UI refinada</span></div>
+          <div class="chk"><div class="chk-dot" style="background:#0369a1">✓</div><span><strong>Credenciales por entorno</strong> — UAT y PROD separadas, sin datos hardcodeados</span></div>
+        </div>
+      </div>
+
+      <div class="impact mt-5" style="background:#f0f9ff;border:1px solid #bae6fd">
+        <span class="font-800" style="color:#0369a1">💳 Impacto — </span>
+        <span class="text-sm" style="color:#0c4a6e">El cliente recibe un email, hace clic, digita su OTP y paga en menos de dos minutos. Sin crear cuenta, sin llamar a nadie, sin intervención del equipo operativo.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 7 — FEBRERO: Deceval + DataCrédito Síntesis
 ═══════════════════════════════════════════════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-orange">
