@@ -281,7 +281,7 @@
         <div class="text-6xl opacity-10 font-black text-blue-400 leading-none select-none">02</div>
       </div>
 
-      <div class="grid grid-cols-2 gap-6">
+      <div style="display:grid;grid-template-columns:1fr 1fr 195px;gap:20px;align-items:start">
         <div class="space-y-2">
           <div class="sec-lbl">Biometría &amp; Liveness (Enero)</div>
           <div class="chk"><div class="chk-dot" style="background:#2970FF">✓</div><span><span style="background:#fffbeb;color:#92400e;border:1px solid #fde68a;border-radius:99px;padding:1px 8px;font-size:9px;font-weight:800">Ene</span> <strong>Liveness con challengers</strong> — movimiento de cabeza + feedback háptico</span></div>
@@ -297,6 +297,18 @@
           <div class="chk"><div class="chk-dot" style="background:#2970FF">✓</div><span><span style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7;border-radius:99px;padding:1px 8px;font-size:9px;font-weight:800">Mar</span> <strong>Detalles de manipulación visibles</strong> en tarjeta KYC del analista</span></div>
           <div class="chk"><div class="chk-dot" style="background:#2970FF">✓</div><span><span style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7;border-radius:99px;padding:1px 8px;font-size:9px;font-weight:800">Mar</span> <strong>Journey unificado</strong> — deudor y codeudor hacen el mismo flujo</span></div>
           <div class="chk"><div class="chk-dot" style="background:#2970FF">✓</div><span><span style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7;border-radius:99px;padding:1px 8px;font-size:9px;font-weight:800">Mar</span> <strong>Foto liveness + cédula</strong> disponible en el detalle de solicitud</span></div>
+        </div>
+
+        <!-- Documento ejemplo -->
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+          <div style="font-size:10px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px">Documento analizado</div>
+          <img src="cedula-colombia.jpeg" alt="Cédula de Ciudadanía Colombia"
+               style="width:180px;height:230px;object-fit:contain;border-radius:10px;box-shadow:0 4px 16px rgba(41,112,255,.15);">
+          <div style="display:flex;flex-direction:column;gap:5px;width:100%">
+            <span class="tag tag-blue" style="justify-content:center;text-align:center">OCR automático</span>
+            <span class="tag tag-green" style="justify-content:center;text-align:center">Liveness check</span>
+            <span class="tag tag-amber" style="justify-content:center;text-align:center">Anti-fraude</span>
+          </div>
         </div>
       </div>
 
