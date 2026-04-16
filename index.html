@@ -1169,7 +1169,7 @@
           </div>
           <span class="pill pill-amber mb-3 inline-block">🚀 Releases &amp; Priorizados</span>
           <h2 class="text-3xl font-black text-slate-900 leading-tight">
-            226 PRs mergeados · 4 deploys a producción<br>y los entregables clave del trimestre
+            226 PRs directo a master · deploy continuo<br>promedio 24 días activos por mes
           </h2>
         </div>
         <div class="text-6xl opacity-10 font-black text-amber-400 leading-none select-none">14</div>
@@ -1183,9 +1183,9 @@
           <div class="text-xs text-slate-400">142 BE · 84 FE</div>
         </div>
         <div class="rounded-2xl p-3 text-center" style="background:#f0fdf4;border:1px solid #bbf7d0">
-          <div class="text-2xl font-black text-emerald-600">4</div>
-          <div class="text-xs font-700 text-slate-700 mt-0.5">Deploys prod</div>
-          <div class="text-xs text-slate-400">develop → master</div>
+          <div class="text-2xl font-black text-emerald-600">72</div>
+          <div class="text-xs font-700 text-slate-700 mt-0.5">Días activos master</div>
+          <div class="text-xs text-slate-400">24 ene · 23 feb · 25 mar</div>
         </div>
         <div class="rounded-2xl p-3 text-center" style="background:#fef3f2;border:1px solid #fecaca">
           <div class="text-2xl font-black text-red-500">29+</div>
@@ -1211,7 +1211,7 @@
         <div style="border:1px solid #e2e8f0;border-radius:14px;padding:14px;background:#fafafa;">
           <div class="flex items-center gap-2 mb-3">
             <span class="pill-month" style="background:#f9b91b;color:#1e293b;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:800">Enero</span>
-            <span style="font-size:10px;color:#94a3b8;font-weight:600">Deploy: 30 ene</span>
+            <span style="font-size:10px;color:#94a3b8;font-weight:600">112 PRs · 24 días activos</span>
           </div>
           <div class="space-y-1.5">
             <div class="flex items-start gap-2">
@@ -1245,7 +1245,7 @@
         <div style="border:1px solid #e2e8f0;border-radius:14px;padding:14px;background:#fafafa;">
           <div class="flex items-center gap-2 mb-3">
             <span class="pill-month" style="background:#f9b91b;color:#1e293b;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:800">Febrero</span>
-            <span style="font-size:10px;color:#94a3b8;font-weight:600">Deploy: 24 feb</span>
+            <span style="font-size:10px;color:#94a3b8;font-weight:600">74 PRs · 23 días activos</span>
           </div>
           <div class="space-y-1.5">
             <div class="flex items-start gap-2">
@@ -1279,7 +1279,7 @@
         <div style="border:1px solid #e2e8f0;border-radius:14px;padding:14px;background:#fafafa;">
           <div class="flex items-center gap-2 mb-3">
             <span class="pill-month" style="background:#f9b91b;color:#1e293b;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:800">Marzo</span>
-            <span style="font-size:10px;color:#94a3b8;font-weight:600">Deploys: 4 mar · 9 mar</span>
+            <span style="font-size:10px;color:#94a3b8;font-weight:600">40 PRs · 25 días activos</span>
           </div>
           <div class="space-y-1.5">
             <div class="flex items-start gap-2">
@@ -1311,32 +1311,53 @@
 
       </div>
 
-      <!-- Bottom strip: deploy timeline visual -->
+      <!-- Bottom strip: PR merge calendar marzo (12 días con PRs a master) -->
       <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:12px 16px;">
-        <div class="text-xs font-700 text-slate-500 uppercase tracking-wide mb-2">Timeline de deploys a producción (develop → master)</div>
-        <div style="position:relative;height:28px;">
-          <!-- base line -->
-          <div style="position:absolute;top:50%;left:0;right:0;height:2px;background:#e2e8f0;transform:translateY(-50%);border-radius:2px;"></div>
-          <!-- Jan 30 -->
-          <div style="position:absolute;left:14%;top:50%;transform:translate(-50%,-50%);">
-            <div style="width:12px;height:12px;border-radius:50%;background:#f9b91b;border:2px solid #d97706;box-shadow:0 0 0 3px #fef3c7;"></div>
+        <div class="flex items-center justify-between mb-2">
+          <div class="text-xs font-700 text-slate-500 uppercase tracking-wide">PRs mergeados a master — Marzo 2026 · 40 PRs en 12 fechas</div>
+          <div class="flex items-center gap-3 text-xs text-slate-400">
+            <span class="flex items-center gap-1"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#f9b91b"></span>Enero</span>
+            <span class="flex items-center gap-1"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#2563eb"></span>Febrero</span>
+            <span class="flex items-center gap-1"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#7c3aed"></span>Marzo</span>
           </div>
-          <div style="position:absolute;left:14%;top:100%;transform:translateX(-50%);font-size:9px;color:#92400e;font-weight:700;white-space:nowrap;margin-top:3px;">30 ene</div>
-          <!-- Feb 24 -->
-          <div style="position:absolute;left:40%;top:50%;transform:translate(-50%,-50%);">
-            <div style="width:12px;height:12px;border-radius:50%;background:#2563eb;border:2px solid #1d4ed8;box-shadow:0 0 0 3px #dbeafe;"></div>
+        </div>
+        <!-- Enero/Feb highlight + Marzo calendar grid -->
+        <div class="flex items-start gap-4">
+          <!-- Jan/Feb summary pills -->
+          <div class="flex flex-col gap-1.5" style="flex-shrink:0">
+            <div style="background:#fef3c7;border:1px solid #fde68a;border-radius:8px;padding:4px 10px;text-align:center">
+              <div style="font-size:11px;font-weight:800;color:#92400e">Ene</div>
+              <div style="font-size:10px;color:#d97706">112 PRs</div>
+            </div>
+            <div style="background:#dbeafe;border:1px solid #93c5fd;border-radius:8px;padding:4px 10px;text-align:center">
+              <div style="font-size:11px;font-weight:800;color:#1e40af">Feb</div>
+              <div style="font-size:10px;color:#2563eb">74 PRs</div>
+            </div>
           </div>
-          <div style="position:absolute;left:40%;top:100%;transform:translateX(-50%);font-size:9px;color:#1e40af;font-weight:700;white-space:nowrap;margin-top:3px;">24 feb</div>
-          <!-- Mar 4 -->
-          <div style="position:absolute;left:66%;top:50%;transform:translate(-50%,-50%);">
-            <div style="width:12px;height:12px;border-radius:50%;background:#7c3aed;border:2px solid #6d28d9;box-shadow:0 0 0 3px #ede9fe;"></div>
+          <!-- Marzo: each day as a dot with label -->
+          <div style="flex:1">
+            <div style="font-size:10px;font-weight:700;color:#6d28d9;margin-bottom:6px;">Marzo — fechas con PR merges a master (BE + FE)</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px;align-items:center;">
+              <!-- 12 días reales: 4,5,6,9,11,12,13,17,18,19,25,27,30 -->
+              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">04</div>
+              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">05</div>
+              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">06</div>
+              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">09</div>
+              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">11</div>
+              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">12</div>
+              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">13</div>
+              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">17</div>
+              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">18</div>
+              <div style="background:#6d28d9;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;box-shadow:0 0 0 2px #ede9fe;">19</div>
+              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">25</div>
+              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">27</div>
+              <div style="background:#10B981;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;box-shadow:0 0 0 2px #d1fae5;">30 ✓</div>
+              <span style="font-size:10px;color:#94a3b8;margin-left:4px;">mar 2026</span>
+            </div>
+            <div style="margin-top:6px;font-size:10px;color:#94a3b8;">
+              ⚡ 19 mar — Bot IA + Portal refactor + GCP switch &nbsp;·&nbsp; 🏆 mayor densidad de PRs del trimestre (6 PRs en un solo día)
+            </div>
           </div>
-          <div style="position:absolute;left:66%;top:100%;transform:translateX(-50%);font-size:9px;color:#5b21b6;font-weight:700;white-space:nowrap;margin-top:3px;">4 mar</div>
-          <!-- Mar 9 -->
-          <div style="position:absolute;left:82%;top:50%;transform:translate(-50%,-50%);">
-            <div style="width:14px;height:14px;border-radius:50%;background:#10B981;border:2px solid #059669;box-shadow:0 0 0 3px #d1fae5;"></div>
-          </div>
-          <div style="position:absolute;left:82%;top:100%;transform:translateX(-50%);font-size:9px;color:#065f46;font-weight:700;white-space:nowrap;margin-top:3px;">9 mar ✓</div>
         </div>
       </div>
 
