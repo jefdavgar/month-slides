@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resumen de Desarrollo Abril 2026 — Cashblock × Luky</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
   <style>
@@ -173,7 +174,7 @@
       </p>
 
       <!-- kpi grid -->
-      <div class="grid grid-cols-3 gap-5 mb-8">
+      <div class="grid grid-cols-2 gap-5 mb-8">
         <div class="rounded-2xl p-5 accent-amber" style="background:#fffbeb">
           <div class="kpi-num" style="color:#f9b91b">392</div>
           <div class="text-sm font-600 text-slate-600 mt-1">Cambios al código</div>
@@ -183,11 +184,6 @@
           <div class="kpi-num text-blue-600">82</div>
           <div class="text-sm font-600 text-slate-600 mt-1">Entregas a producción</div>
           <div class="text-xs text-slate-400">22 días · casi 1 por día hábil</div>
-        </div>
-        <div class="rounded-2xl p-5" style="background:#f8fafc;border-top:4px solid #6366F1">
-          <div class="kpi-num text-indigo-600">3</div>
-          <div class="text-sm font-600 text-slate-600 mt-1">Tickets SCRUM cerrados</div>
-          <div class="text-xs text-slate-400">SCRUM-41 · 233 · 300</div>
         </div>
       </div>
 
@@ -274,7 +270,12 @@
           </h2>
           <p class="text-slate-500 mt-2">Nuevas variables del modelo · Doble oferta al cliente · Re-evaluación automática</p>
         </div>
-        <div class="text-6xl opacity-10 font-black text-cyan-400 leading-none select-none">02</div>
+        <div class="flex flex-col items-end gap-2">
+          <div class="text-6xl opacity-10 font-black text-cyan-400 leading-none select-none">02</div>
+          <a href="https://app.cashblock.io/credit-applications" target="_blank" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;background:#ecfeff;color:#06AED4;font-size:10px;font-weight:700;text-decoration:none;border:1px solid #a5f3fc;font-family:ui-monospace,SFMono-Regular,Consolas,monospace">
+            <i class="fas fa-arrow-up-right-from-square" style="font-size:9px"></i>/credit-applications
+          </a>
+        </div>
       </div>
 
       <div class="grid grid-cols-3 gap-5 mb-5">
@@ -342,7 +343,12 @@
           </h2>
           <p class="text-slate-500 mt-2">Editar monto, plazo o tasa · Ver la nueva cuota al instante · El modelo se actualiza solo</p>
         </div>
-        <div class="text-6xl opacity-10 font-black text-amber-400 leading-none select-none">03</div>
+        <div class="flex flex-col items-end gap-2">
+          <div class="text-6xl opacity-10 font-black text-amber-400 leading-none select-none">03</div>
+          <a href="https://app.cashblock.io/credit-applications" target="_blank" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;background:#fffbeb;color:#d97706;font-size:10px;font-weight:700;text-decoration:none;border:1px solid #fde68a;font-family:ui-monospace,SFMono-Regular,Consolas,monospace">
+            <i class="fas fa-arrow-up-right-from-square" style="font-size:9px"></i>/credit-applications
+          </a>
+        </div>
       </div>
 
       <!-- Wizard steps -->
@@ -435,7 +441,12 @@
           </h2>
           <p class="text-slate-500 mt-2">Videos formativos · Quiz para validar · Certificado al aprobar</p>
         </div>
-        <div class="text-6xl opacity-10 font-black text-purple-400 leading-none select-none">04</div>
+        <div class="flex flex-col items-end gap-2">
+          <div class="text-6xl opacity-10 font-black text-purple-400 leading-none select-none">04</div>
+          <a href="https://app.cashblock.io/faq-videos" target="_blank" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;background:#f5f3ff;color:#8B5CF6;font-size:10px;font-weight:700;text-decoration:none;border:1px solid #ddd6fe;font-family:ui-monospace,SFMono-Regular,Consolas,monospace">
+            <i class="fas fa-arrow-up-right-from-square" style="font-size:9px"></i>/faq-videos
+          </a>
+        </div>
       </div>
 
       <div class="grid grid-cols-2 gap-6">
@@ -497,7 +508,12 @@
           </h2>
           <p class="text-slate-500 mt-2">Carpetas por tipo · Documentos vehiculares incluidos · Descarga masiva en un clic</p>
         </div>
-        <div class="text-6xl opacity-10 font-black text-emerald-400 leading-none select-none">05</div>
+        <div class="flex flex-col items-end gap-2">
+          <div class="text-6xl opacity-10 font-black text-emerald-400 leading-none select-none">05</div>
+          <a href="https://app.cashblock.io/documents" target="_blank" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;background:#f0fdf4;color:#10B981;font-size:10px;font-weight:700;text-decoration:none;border:1px solid #bbf7d0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace">
+            <i class="fas fa-arrow-up-right-from-square" style="font-size:9px"></i>/documents
+          </a>
+        </div>
       </div>
 
       <div class="grid grid-cols-2 gap-6">
@@ -559,7 +575,12 @@
           </h2>
           <p class="text-slate-500 mt-2">Email y SMS masivos · Mensajes personalizados · Doble factor en cambios sensibles</p>
         </div>
-        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:#6366F1">06</div>
+        <div class="flex flex-col items-end gap-2">
+          <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:#6366F1">06</div>
+          <a href="https://app.cashblock.io/bulk-messages" target="_blank" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;background:#eef2ff;color:#6366F1;font-size:10px;font-weight:700;text-decoration:none;border:1px solid #c7d2fe;font-family:ui-monospace,SFMono-Regular,Consolas,monospace">
+            <i class="fas fa-arrow-up-right-from-square" style="font-size:9px"></i>/bulk-messages
+          </a>
+        </div>
       </div>
 
       <div class="grid grid-cols-2 gap-6">
@@ -621,7 +642,12 @@
           </h2>
           <p class="text-slate-500 mt-2">No filtra reglas internas · Alerta sonora al asesor · Más capacidades de pago</p>
         </div>
-        <div class="text-6xl opacity-10 font-black text-amber-400 leading-none select-none">07</div>
+        <div class="flex flex-col items-end gap-2">
+          <div class="text-6xl opacity-10 font-black text-amber-400 leading-none select-none">07</div>
+          <a href="https://app.cashblock.io/support-chat" target="_blank" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;background:#fffbeb;color:#d97706;font-size:10px;font-weight:700;text-decoration:none;border:1px solid #fde68a;font-family:ui-monospace,SFMono-Regular,Consolas,monospace">
+            <i class="fas fa-arrow-up-right-from-square" style="font-size:9px"></i>/support-chat
+          </a>
+        </div>
       </div>
 
       <div class="grid grid-cols-2 gap-6">
@@ -683,7 +709,12 @@
           </h2>
           <p class="text-slate-500 mt-2">Cálculo justo de la liquidación · Estabilidad en celular · Hasta 50M COP por transacción</p>
         </div>
-        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:#0ea5e9">08</div>
+        <div class="flex flex-col items-end gap-2">
+          <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:#0ea5e9">08</div>
+          <a href="https://app.cashblock.io/payment-portal" target="_blank" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;background:#f0f9ff;color:#0369a1;font-size:10px;font-weight:700;text-decoration:none;border:1px solid #bae6fd;font-family:ui-monospace,SFMono-Regular,Consolas,monospace">
+            <i class="fas fa-arrow-up-right-from-square" style="font-size:9px"></i>/payment-portal
+          </a>
+        </div>
       </div>
 
       <div class="grid grid-cols-2 gap-6">
@@ -745,7 +776,12 @@
           </h2>
           <p class="text-slate-500 mt-2">Reporte plano exportable · Embudo visual de verificación · Métricas Finanmoto alineadas</p>
         </div>
-        <div class="text-6xl opacity-10 font-black text-emerald-400 leading-none select-none">09</div>
+        <div class="flex flex-col items-end gap-2">
+          <div class="text-6xl opacity-10 font-black text-emerald-400 leading-none select-none">09</div>
+          <a href="https://app.cashblock.io/reports" target="_blank" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;background:#f0fdf4;color:#10B981;font-size:10px;font-weight:700;text-decoration:none;border:1px solid #bbf7d0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace">
+            <i class="fas fa-arrow-up-right-from-square" style="font-size:9px"></i>/reports
+          </a>
+        </div>
       </div>
 
       <div class="grid grid-cols-2 gap-6">
@@ -872,7 +908,7 @@
       </div>
 
       <!-- KPI row -->
-      <div class="grid grid-cols-5 gap-3 mb-5">
+      <div class="grid grid-cols-4 gap-3 mb-5">
         <div class="rounded-2xl p-3 text-center" style="background:#fffbeb;border:1px solid #fde68a">
           <div class="text-2xl font-black" style="color:#d97706">82</div>
           <div class="text-xs font-700 text-slate-700 mt-0.5">Entregas a producción</div>
@@ -887,11 +923,6 @@
           <div class="text-2xl font-black text-red-500">12</div>
           <div class="text-xs font-700 text-slate-700 mt-0.5">Correcciones urgentes</div>
           <div class="text-xs text-slate-400">resueltas el mismo día</div>
-        </div>
-        <div class="rounded-2xl p-3 text-center" style="background:#eff6ff;border:1px solid #bfdbfe">
-          <div class="text-2xl font-black text-blue-600">3</div>
-          <div class="text-xs font-700 text-slate-700 mt-0.5">Tickets cerrados</div>
-          <div class="text-xs text-slate-400">SCRUM 41 · 233 · 300</div>
         </div>
         <div class="rounded-2xl p-3 text-center" style="background:#f5f3ff;border:1px solid #ddd6fe">
           <div class="text-2xl font-black text-purple-600">392</div>
@@ -1011,55 +1042,17 @@
 
       </div>
 
-      <!-- Bottom strip: fechas de merge a master en Abril -->
-      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:12px 16px;">
-        <div class="flex items-center justify-between mb-2">
-          <div class="text-xs font-700 text-slate-500 uppercase tracking-wide">Fechas de PR a master — Abril 2026</div>
-          <div class="flex items-center gap-3 text-xs text-slate-400">
-            <span class="flex items-center gap-1"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#2563eb"></span>Sem 1-2</span>
-            <span class="flex items-center gap-1"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#7c3aed"></span>Sem 3</span>
-            <span class="flex items-center gap-1"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#059669"></span>Sem 4-5</span>
-          </div>
+      <!-- Bottom: gráfico de entregas por semana -->
+      <div style="background:#fafafa;border:1px solid #e2e8f0;border-radius:12px;padding:14px 18px;">
+        <div class="flex items-center justify-between mb-3">
+          <div class="text-xs font-700 text-slate-500 uppercase tracking-wide">Entregas a producción por semana del mes</div>
+          <div class="text-xs text-slate-400">82 entregas en 22 días · pico Sem 4-5</div>
         </div>
-        <div class="flex items-start gap-4">
-          <!-- Resumen -->
-          <div class="flex flex-col gap-1.5" style="flex-shrink:0">
-            <div style="background:#fef3c7;border:1px solid #fde68a;border-radius:8px;padding:4px 10px;text-align:center">
-              <div style="font-size:11px;font-weight:800;color:#92400e">BE</div>
-              <div style="font-size:10px;color:#d97706">45 PRs</div>
-            </div>
-            <div style="background:#dbeafe;border:1px solid #93c5fd;border-radius:8px;padding:4px 10px;text-align:center">
-              <div style="font-size:11px;font-weight:800;color:#1e40af">FE</div>
-              <div style="font-size:10px;color:#2563eb">37 PRs</div>
-            </div>
-          </div>
-          <!-- Fechas con merge -->
-          <div style="flex:1">
-            <div style="font-size:10px;font-weight:700;color:#6d28d9;margin-bottom:6px;">Abril — fechas con PRs mergeados a master (BE + FE)</div>
-            <div style="display:flex;flex-wrap:wrap;gap:5px;align-items:center;">
-              <div style="background:#2563eb;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">01</div>
-              <div style="background:#2563eb;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">06</div>
-              <div style="background:#2563eb;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">07</div>
-              <div style="background:#2563eb;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">08</div>
-              <div style="background:#2563eb;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">09</div>
-              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">10</div>
-              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">14</div>
-              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">15</div>
-              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">16</div>
-              <div style="background:#7c3aed;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">17</div>
-              <div style="background:#059669;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">23</div>
-              <div style="background:#6d28d9;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;box-shadow:0 0 0 2px #ede9fe;">24</div>
-              <div style="background:#059669;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">26</div>
-              <div style="background:#059669;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">27</div>
-              <div style="background:#059669;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">28</div>
-              <div style="background:#059669;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;">29</div>
-              <div style="background:#10B981;color:#fff;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:800;box-shadow:0 0 0 2px #d1fae5;">30 ✓</div>
-              <span style="font-size:10px;color:#94a3b8;margin-left:4px;">abr 2026</span>
-            </div>
-            <div style="margin-top:6px;font-size:10px;color:#94a3b8;">
-              ⚡ 24 abr — Adjust dialog wizard + Metadata report + Payoff hotfix &nbsp;·&nbsp; 🏆 mayor densidad de PRs del mes (8 PRs en un solo día)
-            </div>
-          </div>
+        <div style="height:200px;position:relative">
+          <canvas id="chart-entregas-semana"></canvas>
+        </div>
+        <div style="margin-top:6px;font-size:10px;color:#94a3b8;text-align:center">
+          ⚡ Día más productivo: 24 abr — 8 entregas en el mismo día (Adjust wizard + Metadata report + Payoff hotfix)
         </div>
       </div>
 
@@ -1226,13 +1219,12 @@
       </div>
 
       <!-- kpi row -->
-      <div class="grid grid-cols-6 gap-3 mb-7">
-        <div class="text-center"><div class="kpi-sm" style="color:#f9b91b">392</div><div class="text-xs text-slate-600 font-600 mt-1">Commits totales</div><div class="text-xs text-slate-400">223 BE · 169 FE</div></div>
-        <div class="text-center"><div class="kpi-sm text-emerald-600">82</div><div class="text-xs text-slate-600 font-600 mt-1">PRs a master</div><div class="text-xs text-slate-400">22 días activos</div></div>
+      <div class="grid grid-cols-5 gap-3 mb-7">
+        <div class="text-center"><div class="kpi-sm" style="color:#f9b91b">392</div><div class="text-xs text-slate-600 font-600 mt-1">Cambios al código</div><div class="text-xs text-slate-400">223 BE · 169 FE</div></div>
+        <div class="text-center"><div class="kpi-sm text-emerald-600">82</div><div class="text-xs text-slate-600 font-600 mt-1">Entregas a producción</div><div class="text-xs text-slate-400">22 días activos</div></div>
         <div class="text-center"><div class="kpi-sm text-blue-600">10+</div><div class="text-xs text-slate-600 font-600 mt-1">Módulos entregados</div><div class="text-xs text-slate-400">Features &amp; integraciones</div></div>
         <div class="text-center"><div class="kpi-sm text-indigo-600">4</div><div class="text-xs text-slate-600 font-600 mt-1">Contribuidores</div><div class="text-xs text-slate-400">Activos</div></div>
-        <div class="text-center"><div class="kpi-sm text-red-500">12</div><div class="text-xs text-slate-600 font-600 mt-1">Hotfixes</div><div class="text-xs text-slate-400">Críticos</div></div>
-        <div class="text-center"><div class="kpi-sm text-purple-600">3</div><div class="text-xs text-slate-600 font-600 mt-1">SCRUM cerrados</div><div class="text-xs text-slate-400">41 · 233 · 300</div></div>
+        <div class="text-center"><div class="kpi-sm text-red-500">12</div><div class="text-xs text-slate-600 font-600 mt-1">Correcciones urgentes</div><div class="text-xs text-slate-400">resueltas el mismo día</div></div>
       </div>
 
       <!-- contrib bars -->
@@ -1321,11 +1313,11 @@
   </div>
 </div>
 
-<!-- Auto-inject logo bar into every slide -->
+<!-- Auto-inject logo bar into every slide + initialize charts -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+  // Logo bar
   document.querySelectorAll('.slide').forEach(function (slide) {
-    // .slide > div (card wrapper) > last div child (content area)
     var card = slide.children[0];
     if (!card) return;
     var content = null;
@@ -1342,6 +1334,55 @@ document.addEventListener('DOMContentLoaded', function () {
       '<img src="metaluky-logo.png" style="height:24px;max-width:100px;" alt="MetaLuky">';
     content.appendChild(bar);
   });
+
+  // Chart: Entregas a producción por semana del mes
+  var chartCanvas = document.getElementById('chart-entregas-semana');
+  if (chartCanvas && typeof Chart !== 'undefined') {
+    new Chart(chartCanvas, {
+      type: 'bar',
+      data: {
+        labels: ['Sem 1-2  ·  Abr 1-9', 'Sem 3  ·  Abr 10-17', 'Sem 4-5  ·  Abr 22-30'],
+        datasets: [{
+          label: 'Entregas a producción',
+          data: [26, 16, 40],
+          backgroundColor: ['#fcd34d', '#f59e0b', '#d97706'],
+          borderRadius: 10,
+          borderWidth: 0,
+          barPercentage: 0.55,
+          categoryPercentage: 0.7
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 800 },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#0f172a',
+            padding: 12,
+            cornerRadius: 8,
+            titleFont: { weight: '700', size: 12 },
+            bodyFont: { weight: '500', size: 12 },
+            callbacks: {
+              label: function (ctx) { return '  ' + ctx.parsed.y + ' entregas a producción'; }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: '#e2e8f0' },
+            ticks: { color: '#64748b', font: { size: 11 }, stepSize: 10 }
+          },
+          x: {
+            grid: { display: false },
+            ticks: { color: '#475569', font: { weight: '700', size: 11 } }
+          }
+        }
+      }
+    });
+  }
 });
 </script>
 </body>
